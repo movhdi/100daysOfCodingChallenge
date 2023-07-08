@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/med/100daysOfCodingChallenge/p05_sexyPrimeNumbers",
-      "program": "/home/med/100daysOfCodingChallenge/p05_sexyPrimeNumbers/build/Debug/outDebug",
+      "cwd": "/home/med/100daysOfCodingChallenge/p06_AbundantNumbers",
+      "program": "/home/med/100daysOfCodingChallenge/p06_AbundantNumbers/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
