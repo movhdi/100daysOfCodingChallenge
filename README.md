@@ -6,7 +6,7 @@ It is a challenge to change one's life, not completely changing that but to help
 I have started the challenge a couple of days ago. My challenge is about c++ programming language. Every single day I do code to solve a new problem using c++ language. I have decided to embedd a test function for every program I write. Anyway some of them I feel do not need a test function because they are straight forward.
 The following table will get updated every day I do something new. 
 
-I you want to warm up, jump in! Do my challenge.
+If you want to warm up, jump in! Do my challenge.
 
 
 |   |                Math Problems            |  Status |
