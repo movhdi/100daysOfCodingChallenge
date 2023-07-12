@@ -17,7 +17,7 @@ If you want to warm up, jump in! Do my challenge.
 |4  | Largest prime smaller than given number | :heavy_check_mark: |
 |5  | Sexy prime pairs                        | :heavy_check_mark: |
 |6  | Abundant numbers                        | :heavy_check_mark: |
-|7  | Amicable numbers                        |   |
+|7  | Amicable numbers                        | :heavy_check_mark: |
 |8  | Armstrong numbers                       |   |
 |9  | Prime factors of a number               |   |
 |10 | Gray code                               |   |
