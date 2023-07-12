@@ -1,12 +1,12 @@
 # 100 Days of coding challenge with c++
 Hi there! Have you ever heard about 100 days of coding challenge? If you have not, I **strongly recommend** you to take a look on this website [100daysofcode.com](100daysofcode.com).
 
-It is a challenge to change one's life, not completely changing one's life but to help him/her achieve something desired or long awaited for.
+It is a challenge to change one's life, not completely changing that but to help him/her achieve something desired or long awaited for.
 
 I have started the challenge a couple of days ago. My challenge is about c++ programming language. Every single day I do code to solve a new problem using c++ language. I have decided to embedd a test function for every program I write. Anyway some of them I feel do not need a test function because they are straight forward.
 The following table will get updated every day I do something new. 
 
-I you want to warm up, jump in! Do my challenge.
+If you want to warm up, jump in! Do my challenge.
 
 
 |   |                Math Problems            |  Status |
