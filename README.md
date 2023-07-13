@@ -19,7 +19,7 @@ If you want to warm up, jump in! Do my challenge.
 |6  | Abundant numbers                        | :heavy_check_mark: |
 |7  | Amicable numbers                        | :heavy_check_mark: |
 |8  | Armstrong numbers                       | :heavy_check_mark: |
-|9  | Prime factors of a number               |   |
+|9  | Prime factors of a number               | :heavy_check_mark: |
 |10 | Gray code                               |   |
 |11 | Converting numerical values to Roman    |   |
 |12 | Largest Collatz sequence                |   |
