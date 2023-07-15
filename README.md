@@ -21,7 +21,7 @@ If you want to warm up, jump in! Do my challenge.
 |8  | Armstrong numbers                       | :heavy_check_mark: |
 |9  | Prime factors of a number               | :heavy_check_mark: |
 |10 | Gray code                               | :heavy_check_mark: |
-|11 | Converting numerical values to Roman    |   |
+|11 | Converting numerical values to Roman    | :heavy_check_mark: |
 |12 | Largest Collatz sequence                |   |
 |13 | Computing the value of PI               |   |
 |14 | Validating ISBNs                        | :heavy_check_mark: |
