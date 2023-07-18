@@ -23,5 +23,20 @@ If you want to warm up, jump in! Do my challenge.
 |10 | Gray code                               | :heavy_check_mark: |
 |11 | Converting numerical values to Roman    | :heavy_check_mark: |
 |12 | Largest Collatz sequence                | :heavy_check_mark: |
-|13 | Computing the value of PI               |   |
+|13 | Computing the value of PI               | :heavy_check_mark: |
 |14 | Validating ISBNs                        | :heavy_check_mark: |
+
+Today, 18-7-2023 I completed Math challenges, and I am going to solve challenges from the second chapter. The subject of this chapter is language features. I am really longing to start this chapter.
+
+
+|   |                Language Features        |  Status            |
+|---|-----------------------------------------|--------------------|
+|15  | IPv4 Data Type     | :heavy_check_mark: |
+|16  | Enumerating IPv4 addresses in a range         |  |
+|17  | Creating a 2D array with basic operations     |  |
+|18  | Minumum function with any number of arguments |  |
+|19  | Adding a range of values to a container       |  |
+|20 | container any, all, none                       |  |
+|21  | system handle wrapper                | |
+|22  | Literals of various temperature scales  |  |
+|23  | Prime factors of a number               |  |
