@@ -3,21 +3,23 @@
 #include <iostream> 
 #include <bitset>
 #include <array>
+#include <algorithm>
 
 class IPv4{
 public:
     u_int32_t ipv4;
-    std::array<uint32_t, 4> data;
+    std::array<unsigned char, 4> data;
     // first constructor
     IPv4(): ipv4{0},data{{0}}
     {
     }
 
     // second constructor
-    IPv4(uint32_t a, uint32_t b,
-         uint32_t c, uint32_t d)
+    IPv4(unsigned char a, unsigned char b,
+         unsigned char c, unsigned char d)
     {
-        this->data = {a,b,c,d};
+        this->data = {d,c,b,a};
+        this->ipv4 = 0;
     }
     
     // Assignment operator overloading
@@ -42,8 +44,17 @@ public:
         is >> b1 >> d1 >> b2 >> d2 >> b3 >> d3 >> b4;
         if(d1 == '.' && d2 == '.' && d3 == '.')
         {
-            IPv4_input.ipv4 = b4 | (b3 << 8) | (b2 << 16) | (b1 << 24);
-            IPv4_input.data = {b4,b3,b2,b1};
+            if(std::max({b1,b2,b3,b4}) < 256)
+            {
+                IPv4_input.ipv4 = b4 | (b3 << 8) | (b2 << 16) | (b1 << 24);
+                IPv4_input.data = {static_cast<unsigned char> (b4),
+                                   static_cast<unsigned char> (b3),
+                                   static_cast<unsigned char> (b2),
+                                   static_cast<unsigned char> (b1)};
+            }else
+            {
+                is.setstate(std::ios::failbit);
+            }
         }else
         {
             is.setstate(std::ios::failbit);
@@ -51,28 +62,37 @@ public:
         return is;
     }
 
-    friend std::ostream& operator<<(std::ostream& os,  IPv4&  IPv4_output)
+    friend std::ostream& operator<<(std::ostream& os, const IPv4&  IPv4_output)
     {
-        return os << ((IPv4_output.ipv4 & ((unsigned int) 0xFF << 24)) >> 24) << '.' 
+        return os << "My Method: "
+                  << ((IPv4_output.ipv4 & ((unsigned int) 0xFF << 24)) >> 24) << '.' 
                   << ((IPv4_output.ipv4 & ((unsigned int) 0xFF << 16)) >> 16) << '.' 
-                  << ((IPv4_output.ipv4 & ((unsigned int) 0xFF << 8)) >> 8)<< '.' 
+                  << ((IPv4_output.ipv4 & ((unsigned int) 0xFF <<  8)) >>  8) << '.' 
                   << (IPv4_output.ipv4 & (unsigned int) 0xFF) << std::endl
-                  << (IPv4_output.data[3]) << '.'
-                  << (IPv4_output.data[2]) << '.'
-                  << (IPv4_output.data[1]) << '.'
-                  << (IPv4_output.data[0]) << std::endl;
+                  << "Book's Method: "
+                  << static_cast<uint32_t>(IPv4_output.data[3]) << '.'
+                  << static_cast<uint32_t>(IPv4_output.data[2]) << '.'
+                  << static_cast<uint32_t>(IPv4_output.data[1]) << '.'
+                  << static_cast<uint32_t>(IPv4_output.data[0]) << std::endl;
     }
 };
 
 
 int main()
 {
-    IPv4 example(192,168,0,1);
+    IPv4 ip(192,168,0,1);
+    std::cout << "ip defined by constructor:\n" << ip << std::endl;
     std::cout << "Enter IP Address\n";
-    std::cin >> example;
-    std::cout << '\n' << "The IP is: " << example;
-    std::array<uint32_t, 2> alo{255,254};
-    std::cout << static_cast<unsigned char> (alo[0] & 0xff) << std::endl;
+    std::cin >> ip;
+    if(!std::cin.fail())
+    {
+        std::cout << '\n' << "The IP is: \n" << ip;
+    }else
+    {
+        std::cout << "Invalid Input\n";
+        return 0;
+    }
+    
     return 0;
 }
 
