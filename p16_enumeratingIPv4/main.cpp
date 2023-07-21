@@ -10,16 +10,16 @@ public:
     u_int32_t ipv4;
     std::array<unsigned char, 4> data;
     // first constructor
-    IPv4(): ipv4{0},data{{0}}
+    constexpr IPv4(): ipv4{0},data{{0}}
     {
     }
 
     // second constructor
-    IPv4(unsigned char a, unsigned char b,
-         unsigned char c, unsigned char d)
+    constexpr IPv4(unsigned char a, unsigned char b,
+                   unsigned char c, unsigned char d):
+        ipv4{static_cast<uint32_t> ( (unsigned int)d | (unsigned int)c << 8 | (unsigned int)b << 16 | (unsigned int)a << 24)},
+        data{{d,c,b,a}}
     {
-        this->data = {d,c,b,a};
-        this->ipv4 = static_cast<uint32_t> ( (unsigned int)d | (unsigned int)c << 8 | (unsigned int)b << 16 | (unsigned int)a << 24) ;
     }
     
     // third constructor
@@ -31,12 +31,19 @@ public:
         this->data[0] = static_cast<unsigned char>( a        & (0xFF));
         this->ipv4 = a;
     }
+
+    // Copy constructor
+    IPv4(IPv4 const & other) noexcept
+    {
+        ipv4 = other.ipv4;
+        data = other.data;
+    }
     
     // Assignment operator overloading
-    IPv4& operator=(IPv4 const & other)
+    IPv4& operator=(IPv4 const & other) noexcept
     {
-        this->data = other.data;
         this->ipv4 = other.ipv4;
+        this->data = other.data;
         return *this;
     }
     
@@ -62,16 +69,24 @@ public:
 
     friend bool operator<=(const IPv4& lhs, const IPv4& rhs)
     {
-        return !(lhs>rhs);
+        return !(rhs<lhs);
     }
     friend bool operator>=(const IPv4& lhs, const IPv4& rhs)
     {
-        return !(rhs>lhs);
+        return !(lhs<rhs);
     }
 
     IPv4& operator++()
     {
         *this = IPv4(1 + this->ipv4);
+        return *this;
+    }
+
+    IPv4& operator++(int)
+    {
+        IPv4 result((*this).ipv4);
+        ++result;
+        *this = result;
         return *this;
     }
 
@@ -126,18 +141,7 @@ public:
 int main()
 {
     IPv4 ip(127,0,0,0);
-    IPv4 ip2(127,0,0,1);
-    // std::cout << "ip defined by constructor:\n" << ip << std::endl;
-    // std::cout << "Enter IP Address\n";
-    // std::cin >> ip;
-    // if(!std::cin.fail())
-    // {
-    //     std::cout << '\n' << "The IP is: \n" << ip;
-    // }else
-    // {
-    //     std::cout << "Invalid Input\n";
-    //     return 0;
-    // }
+    IPv4 ip2(127,0,3,230);
     if(ip < ip2)
     {
         std::cout << "ip < ip2 test passed\n";
@@ -149,5 +153,11 @@ int main()
     {
         std::cout << ++ip  << std::endl << ++ip << std::endl;
     }
+
+    for(IPv4 i = ip; i <= ip2 ; ++i)
+    {
+        std::cout << i << std::endl;
+    }
+
     return 0;
 }
