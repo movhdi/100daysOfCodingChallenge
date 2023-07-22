@@ -125,9 +125,9 @@ public:
     friend std::ostream& operator<<(std::ostream& os, const IPv4&  IPv4_output)
     {
         return os << "My Method: "
-                  << ((IPv4_output.ipv4 & ((unsigned int) 0xFF << 24)) >> 24) << '.' 
-                  << ((IPv4_output.ipv4 & ((unsigned int) 0xFF << 16)) >> 16) << '.' 
-                  << ((IPv4_output.ipv4 & ((unsigned int) 0xFF <<  8)) >>  8) << '.' 
+                  << ((IPv4_output.ipv4 >> 24) & ((unsigned int) 0xFF )) << '.' 
+                  << ((IPv4_output.ipv4 >> 16) & ((unsigned int) 0xFF )) << '.' 
+                  << ((IPv4_output.ipv4 >> 8)  & ((unsigned int) 0xFF )) << '.' 
                   << (IPv4_output.ipv4 & (unsigned int) 0xFF) << std::endl
                   << "Book's Method: "
                   << static_cast<uint32_t>(IPv4_output.data[3]) << '.'
