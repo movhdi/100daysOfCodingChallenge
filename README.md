@@ -33,7 +33,7 @@ Today, 18-7-2023 I completed Math challenges, and I am going to solve challenges
 |---|-----------------------------------------|--------------------|
 |15  | IPv4 Data Type     | :heavy_check_mark: |
 |16  | Enumerating IPv4 addresses in a range         | :heavy_check_mark: |
-|17  | Creating a 2D array with basic operations     |  |
+|17  | Creating a 2D array with basic operations     | :heavy_check_mark: |
 |18  | Minumum function with any number of arguments |  |
 |19  | Adding a range of values to a container       |  |
 |20 | container any, all, none                       |  |
