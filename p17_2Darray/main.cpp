@@ -66,6 +66,25 @@ public:
     {
         this->arr.swap(other.arr);
     }
+    
+    const_iterator begin() const
+    {
+        return arr.data();
+    }
+
+    const_iterator end() const
+    {
+        return arr.data() + arr.size();
+    }
+
+    iterator begin()
+    {
+        return arr.data();
+    }
+    iterator end()
+    {
+        return arr.data() + arr.size();
+    }
 };
 
 int main()
@@ -92,8 +111,8 @@ int main()
         std::cout << std::endl;
     }
     // iterating 
-    // std::copy(std::begin(a),std::end(a),std::ostream_iterator<int>(std::cout, " "));
-
+    std::copy(std::begin(a),std::end(a),std::ostream_iterator<int>(std::cout, " "));
+    std::cout << std::endl;
     // filling
     array2d<int,2,3> b;
     b.fill(1);
