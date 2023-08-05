@@ -26,6 +26,11 @@ public:
             throw std::out_of_range("The array entered is out of range!");
         }
     }
+
+    array2d(array2d&& other)
+    {
+        this->arr = other.arr;
+    }
     
     size_t size(size_t const rank)
     {
@@ -59,7 +64,7 @@ public:
 
     void swap(array2d& other) noexcept
     {
-        this->arr.swap(other.arr)
+        this->arr.swap(other.arr);
     }
 };
 
@@ -77,24 +82,58 @@ int main()
         }
     }
 
+    std::cout << "Printing a defind as {1,2,3,4,5,6}:\n";
+    for(size_t i = 1; i <= a.size(1); i++)
+    {
+        for(size_t j = 1; j <= a.size(2); j++)
+        {
+            std::cout << a(i,j) << ", ";
+        }
+        std::cout << std::endl;
+    }
     // iterating 
     // std::copy(std::begin(a),std::end(a),std::ostream_iterator<int>(std::cout, " "));
 
     // filling
     array2d<int,2,3> b;
     b.fill(1);
+    std::cout << "Result of using fill(int i) method:\n";
+
     for(size_t i = 1; i <= b.size(1); i++)
     {
         for(size_t j = 1; j <= b.size(2); j++)
         {
             std::cout << b(i,j) << ", ";
         }
+        std::cout << std::endl;
     }
+
+    std::cout << std::endl;
+
     // swapping
-    // a.swap(b);
+    a.swap(b);
 
     // moving
-    // array2d<int, 2, 3> c(std::move(b));
+    array2d<int, 2, 3> c(std::move(b));
+    std::cout << "Result of using std::move():\n";
+    for(size_t i = 1; i <= c.size(1); i++)
+    {
+        for(size_t j = 1; j <= c.size(2); j++)
+        {
+            std::cout << c(i,j) << ", ";
+        }
+        std::cout << std::endl;
+    }
+    std::cout << "Printing a after using swap method on b.swap(a):\n";
+    for(size_t i = 1; i <= a.size(1); i++)
+    {
+        for(size_t j = 1; j <= a.size(2); j++)
+        {
+            std::cout << a(i,j) << ", ";
+        }
+        std::cout << std::endl;
+    }
+
     return 0;
 }
 
