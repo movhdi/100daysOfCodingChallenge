@@ -39,6 +39,21 @@ namespace tmprtur
     {
         return temperature_<scale::celcius> {static_cast<double> (amount)};
     }
+
+    temperature_<scale::fahrenheit> operator "" _f(long double const amount)
+    {
+        return temperature_<scale::fahrenheit> {static_cast<double> (amount)};
+    }
+
+    temperature_<scale::kelvin> operator "" _k(long double const amount)
+    {
+        return temperature_<scale::kelvin> {static_cast<double> (amount)};
+    }
+    template<scale S, scale R>
+    temperature_<S> temperature_cast(temperature_<R> other)
+    {
+
+    }
 }
 
 namespace temperature_scale_literals
