@@ -31,7 +31,12 @@ namespace tmprtur
     {
         double amount;
     public:
-        constexpr explicit temperature_(double const value):amount(value);
+        constexpr explicit temperature_(double const value):amount(value){};
+        explicit operator double() const {return amount;}
+        double get_amount() const
+        {
+            return amount;
+        }
 
     };
     
@@ -50,9 +55,33 @@ namespace tmprtur
         return temperature_<scale::kelvin> {static_cast<double> (amount)};
     }
     template<scale S, scale R>
-    temperature_<S> temperature_cast(temperature_<R> other)
+    struct conversion
     {
+        double convert(double const tempe) const = delete;
+    };
 
+    template <>
+    struct conversion<scale::celcius,scale::fahrenheit>
+    {
+        double convert(double const tempe) const
+        {
+            return (5.0f/9.0f)*(tempe-32);
+        }
+    };
+    template<>
+    struct conversion<scale::fahrenheit,scale::celcius>
+    {
+        double convert(double const tempe) const
+        {
+            return (9.0f/5.0f)*tempe+32;
+        }
+    };
+
+    template<scale S, scale R>
+    temperature_<S> temperature_cast(temperature_<R> const other)
+    {
+        conversion<S,R> conv;
+        return temperature_<S> (conv.convert(other.get_amount()));
     }
 }
 
