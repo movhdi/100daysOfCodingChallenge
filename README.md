@@ -38,5 +38,21 @@ Today, 18-7-2023 I completed Math challenges, and I am going to solve challenges
 |19  | Adding a range of values to a container       | :heavy_check_mark: |
 |20 | container any, all, none                       | :heavy_check_mark: |
 |21  | system handle wrapper                | |
-|22  | Literals of various temperature scales  |  |
-|23  | Prime factors of a number               |  |
+|22  | Literals of various temperature scales  | :heavy_check_mark: |
+
+Tonight I think chapter two was also finished. I happy to see I have completed nearly 22 challenges. The date of today is 12-8-2023.
+It is nearly a month past the day I finished chapter one. This chapter was more challenging than the first chapter. I learned and yet many more things are left. I have not a clear vision about constexpr, about inline specifier, etc.
+In this chapter I left p21 unsolved, intentionaly. Because it has a flavour of windows c++ which I am not really into. Preferrably I code in linux not beyond it.
+Now it is time to go for more challenges!
+
+|   |                Language Features        |  Status            |
+|---|-----------------------------------------|--------------------|
+|23  | Binary to string conversion     |  |
+|24  | String to binary conversion         |  |
+|25  | Capitalizing an article     | |
+|26  | Joining strings together separated by a delimiter |  |
+|27  | Splitting a string into tokens with a list of possible delimiters       |  |
+|28  | Longest palindromic substring                      |  |
+|29  | License plate validation                | |
+|30  | Extracting URL parts  |  |
+|31  | Transforming dates in string  |  |
