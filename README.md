@@ -47,8 +47,8 @@ Now it is time to go for more challenges!
 
 |   |                Language Features        |  Status            |
 |---|-----------------------------------------|--------------------|
-|23  | Binary to string conversion     |  |
-|24  | String to binary conversion         |  |
+|23  | Binary to string conversion     | :heavy_check_mark: |
+|24  | String to binary conversion         | :heavy_check_mark: |
 |25  | Capitalizing an article     | |
 |26  | Joining strings together separated by a delimiter |  |
 |27  | Splitting a string into tokens with a list of possible delimiters       |  |
