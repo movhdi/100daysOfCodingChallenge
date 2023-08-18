@@ -12,6 +12,10 @@ std::string join_strings(std::vector<std::string> const & text, char const * del
         result += it;
         result += delimiter;
     }
+    if(text.data())
+    {
+        result.pop_back();
+    }
     return result;
 }
 int main()
@@ -20,7 +24,7 @@ int main()
     std::vector<std::string> v1{ "this","is","an","example" };
     std::vector<std::string> v2{ "example" };
     std::vector<std::string> v3{ };
-    std::cout << join_strings(v1, " ").size() << "     " << ("this is an example"s).size() <<  std::endl;
+    std::cout << join_strings(v1, " ").size() << "  vs " << ("this is an example"s).size() <<  std::endl;
     std::cout << join_strings(v2, " ") << std::endl; 
     std::cout << join_strings(v3, " ") << std::endl; 
 
