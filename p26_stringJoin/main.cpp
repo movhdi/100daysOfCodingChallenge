@@ -4,7 +4,8 @@
 #include <iomanip>
 #include <cassert>
 
-std::string join_strings(std::vector<std::string> const & text, char const * delimiter)
+template <typename C>
+std::string join_strings(C const & text, char const * delimiter)
 {
     std::string result;
     for(auto it : text)
