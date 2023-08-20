@@ -10,12 +10,17 @@
 std::string longest_palindrome(std::string_view text)
 {
     size_t const len = text.size();
+
+    // the element at [i, j] indicates whether the substring from position i to j is a palindrome.
     std::vector<bool> table;
+
+    // Requirement 1
     // setting all [i,i] elements true
     for(size_t i{}; i < len ; i++)
     {
         table.push_back(true);
     }
+    // Requirement 2
     // setting elements [i,i+1] true for two character palindromes (consecutive two identical characters)
     for(size_t i{}; i < len - 1 ; i++)
     {
@@ -24,7 +29,18 @@ std::string longest_palindrome(std::string_view text)
             table[i*len + i + 1] = true;
         }
     }
+    // Requirement 3
+    // setting the element at [i,j] to true if the
+    // element at [i+1,j-1] is true and the characters on the positions i and j in the string are
+    // also equal.
+    for()
+    {
+        for()
+        {
 
+        }
+    }
+    // returning garbage but without error (for now)
     return std::string(text.substr(1,2));
 }
 
