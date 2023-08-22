@@ -49,10 +49,10 @@ Now it is time to go for more challenges!
 |---|-----------------------------------------|--------------------|
 |23  | Binary to string conversion     | :heavy_check_mark: |
 |24  | String to binary conversion         | :heavy_check_mark: |
-|25  | Capitalizing an article     | |
-|26  | Joining strings together separated by a delimiter |  |
-|27  | Splitting a string into tokens with a list of possible delimiters       |  |
-|28  | Longest palindromic substring                      |  |
+|25  | Capitalizing an article     |:heavy_check_mark: |
+|26  | Joining strings together separated by a delimiter | :heavy_check_mark: |
+|27  | Splitting a string into tokens with a list of possible delimiters       | :heavy_check_mark: |
+|28  | Longest palindromic substring                      | :heavy_check_mark: |
 |29  | License plate validation                | |
 |30  | Extracting URL parts  |  |
 |31  | Transforming dates in string  |  |
