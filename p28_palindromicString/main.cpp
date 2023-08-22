@@ -47,12 +47,12 @@ std::string longest_palindrome(std::string_view text)
     // also equal.
     for(size_t k{2}; k <= len ; k++ )
     {
-        for(size_t j{}; j <= len - k - 1 ; j++)
+        for(size_t j{}; j <= len - k  ; j++)
         {
-            if(text[j + k] == text[j] && table[(j+1)*len + j + k - 2])
+            if(text[j + k] == text[j] && table[(j+1)*len + j + k - 1])
             {
                 table[j*len + j + k] = true;
-                if(maxlen < k)
+                if(maxlen <= k)
                 {
                     longestbegin = j;
                     maxlen = k+1;
@@ -69,4 +69,6 @@ int main()
     assert(longest_palindrome("sahararahnide") == "hararah");
     assert(longest_palindrome("level") == "level");
     assert(longest_palindrome("s") == "s");
+    assert(longest_palindrome("ppleaaa") == "aaa");
+    assert(longest_palindrome("aaalkdpe") == "aaa");
 }
