@@ -7,6 +7,11 @@
 #include <cassert>
 #include <string_view>
 
+// To do so we need
+// a table of Boolean values, of size NxN,
+// where the element at [i, j] indicates whether the
+// substring from position i to j is a palindrome.
+
 std::string longest_palindrome(std::string_view text)
 {
     size_t const len = text.size();
@@ -23,6 +28,7 @@ std::string longest_palindrome(std::string_view text)
     }
     // Requirement 2
     // setting elements [i,i+1] true for two character palindromes (consecutive two identical characters)
+    // this for loop helps us find palindroms with EVEN length, because the central part of it is a two character set.
     for(size_t i{}; i < len - 1 ; i++)
     {
         if(text[i] == text[i+1])
@@ -39,23 +45,21 @@ std::string longest_palindrome(std::string_view text)
     // setting the element at [i,j] to true if the
     // element at [i+1,j-1] is true and the characters on the positions i and j in the string are
     // also equal.
-    for(size_t k{3}; k <= len ; k++ )
+    for(size_t k{2}; k <= len ; k++ )
     {
-        for(size_t j{}; j <= len - k ; j++)
+        for(size_t j{}; j <= len - k - 1 ; j++)
         {
-            size_t i = j + k -1;
-            if(text[i] == text[j] && table[(j+1)*len + i - 1])
+            if(text[j + k] == text[j] && table[(j+1)*len + j + k - 2])
             {
-                table[j*len + i] = true;
+                table[j*len + j + k] = true;
                 if(maxlen < k)
                 {
                     longestbegin = j;
-                    maxlen = k;
+                    maxlen = k+1;
                 }
             }
         }
     }
-    // returning garbage but without error (for now)
     return std::string(text.substr(longestbegin,maxlen));
 }
 
