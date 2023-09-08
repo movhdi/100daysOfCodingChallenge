@@ -54,5 +54,5 @@ Now it is time to go for more challenges!
 |27  | Splitting a string into tokens with a list of possible delimiters       | :heavy_check_mark: |
 |28  | Longest palindromic substring                      | :heavy_check_mark: |
 |29  | License plate validation                | :heavy_check_mark: |
-|30  | Extracting URL parts  |  |
+|30  | Extracting URL parts  | :heavy_check_mark: |
 |31  | Transforming dates in string  |  |
