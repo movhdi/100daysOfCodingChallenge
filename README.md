@@ -55,4 +55,4 @@ Now it is time to go for more challenges!
 |28  | Longest palindromic substring                      | :heavy_check_mark: |
 |29  | License plate validation                | :heavy_check_mark: |
 |30  | Extracting URL parts  | :heavy_check_mark: |
-|31  | Transforming dates in string  |  |
+|31  | Transforming dates in string  | :heavy_check_mark: |
