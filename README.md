@@ -56,3 +56,6 @@ Now it is time to go for more challenges!
 |29  | License plate validation                | :heavy_check_mark: |
 |30  | Extracting URL parts  | :heavy_check_mark: |
 |31  | Transforming dates in string  | :heavy_check_mark: |
+
+
+Today is 15-09-2023. So the last chapter took nearly a month. Tomorrow morning I am going to Istanbul. A couple of weeks ago I was on another trip to another country.That is why my contributions figure has more blank squares than the months before. Anyway, chapter 3 is now done. I am going for another adventure in chapter 4 which is about "Streams and Filesystems".
