@@ -45,7 +45,7 @@ It is nearly a month past the day I finished chapter one. This chapter was more 
 In this chapter I left p21 unsolved, intentionaly. Because it has a flavour of windows c++ which I am not really into. Preferrably I code in linux not beyond it.
 Now it is time to go for more challenges!
 
-|   |                Language Features        |  Status            |
+|   |                Strings and regular expressions        |  Status            |
 |---|-----------------------------------------|--------------------|
 |23  | Binary to string conversion     | :heavy_check_mark: |
 |24  | String to binary conversion         | :heavy_check_mark: |
@@ -59,3 +59,13 @@ Now it is time to go for more challenges!
 
 
 Today is 15-09-2023. So the last chapter took nearly a month. Tomorrow morning I am going to Istanbul. A couple of weeks ago I was on another trip to another country.That is why my contributions figure has more blank squares than the months before. Anyway, chapter 3 is now done. I am going for another adventure in chapter 4 which is about "Streams and Filesystems".
+
+|   |                Streams and Filesystems        |  Status            |
+|---|-----------------------------------------|--------------------|
+|32  | Pascal's triangle     |  |
+|33  | Tabular printing of a list of processes         |  |
+|34  | Printing empty lines from a text file     | |
+|35  | Computing the size of a directory |  |
+|36  | Deleting files older than a given date       |  |
+|37  | Finding files in a directory that match a regular expression |  |
+|38  | Temporary log files |  |
