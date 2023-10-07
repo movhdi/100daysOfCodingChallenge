@@ -86,13 +86,14 @@ static std::string size_string(size_t size)
 }
 
 
-int main(int argc, char * argv[])
+int main(int argc, char *argv[])
 {
     fs::path dir;
-    if(argc > 1 )
+    if (argc > 1)
     {
         dir = argv[1];
-    }else
+    }
+    else
     {
         dir = ".";
     }
@@ -105,7 +106,11 @@ int main(int argc, char * argv[])
     std::vector<std::tuple<fs::path, fs::file_status, size_t>> fileInfoBank;
     // Transform: applies an operation sequentially (here "fileinfo" function) and stores the value returned
     // by each operation in the range that begins at result
-    std::transform(fs::begin(fs::directory_iterator(dir)),fs::end(fs::directory_iterator(dir)), std::back_inserter(fileInfoBank),fileinfo);
+    // Note: the following function gives segmentation fault when I use fileInfoBank.end() instead of backinserter
+    std::transform(fs::begin(fs::directory_iterator(dir)),
+                   fs::end(fs::directory_iterator(dir)),
+                   std::back_inserter(fileInfoBank),
+                   fileinfo);
     for (const auto &[path, status, size] : fileInfoBank)
     {
         std::cout << type_char(status) << rwx(status.permissions()) << " " << std::setw(4) << std::right
