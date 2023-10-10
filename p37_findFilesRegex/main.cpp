@@ -22,16 +22,15 @@ std::vector<std::filesystem::directory_entry> find_file(std::filesystem::path co
 
 int main(int argc, char *argv[])
 {
-    const auto path = std::filesystem::current_path();
-    // auto files = find_file(path, std::regex{"jpg"});
-
-
     namespace fs = std::filesystem;
     auto dir = fs::temp_directory_path();
     auto pattern = R"(wct[0-9a-zA-Z]{3}\.tmp)";
-    auto files = find_file(path, std::regex(pattern));
+    const auto path = std::filesystem::current_path();
 
-    // auto result = find_file(dir, pattern);
+
+    auto files = find_file(path, std::regex{"jpg"});
+    // auto files = find_file(dir, std::regex(pattern));
+
     for (auto const &entry : files)
     {
         std::cout << entry.path().string() << std::endl;
