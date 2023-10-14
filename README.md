@@ -69,3 +69,14 @@ Today is 15-09-2023. So the last chapter took nearly a month. Tomorrow morning I
 |36  | Deleting files older than a given date       | :heavy_check_mark:  |
 |37  | Finding files in a directory that match a regular expression | :heavy_check_mark:   |
 |38  | Temporary log files | :heavy_check_mark:  |
+
+Well, the last chapter was finished on 14-10-2023, it means this chapter took a month to complete. I was in Istanbul so I did not code a week. Therefore I think I have become better at coding. This month I started to add some more problems from another book that I think really helped me to grasp the concepts of filesystem lib. Now I am going for another chapter of challenge. Ladies and Gentlemen, Here is DATE and TIME!
+
+|   |                Streams and Filesystems        |  Status            |
+|---|-----------------------------------------|--------------------|
+|39  | Measuring function execution time     |  |
+|40  | Number of days between two dates | |
+|41  | Day of the week     |  |
+|42  | Day and week of the year | |
+|43  | meeting time for multiple time zones| |
+|44  | Monthly Calendar | |
