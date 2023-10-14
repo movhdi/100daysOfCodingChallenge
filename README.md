@@ -68,4 +68,4 @@ Today is 15-09-2023. So the last chapter took nearly a month. Tomorrow morning I
 |35  | Computing the size of a directory | :heavy_check_mark: |
 |36  | Deleting files older than a given date       | :heavy_check_mark:  |
 |37  | Finding files in a directory that match a regular expression | :heavy_check_mark:   |
-|38  | Temporary log files |  |
+|38  | Temporary log files | :heavy_check_mark:  |
