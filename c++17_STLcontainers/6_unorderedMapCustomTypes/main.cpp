@@ -28,7 +28,7 @@ struct std::hash<coord>
 };
 #else
 template <typename T>
-struct lhash
+struct myhash
 {
     using result_type = size_t;
     result_type operator()(const T &c) const
@@ -43,7 +43,7 @@ int main()
 #ifdef std_hash_used
     std::unordered_map<coord, int> m{{{0, 0}, 1}, {{0, 1}, 2}, {{2, 1}, 3}};
 #else
-    std::unordered_map<coord, int, lhash<coord>> m{{{0, 0}, 1}, {{0, 1}, 2}, {{2, 1}, 3}};
+    std::unordered_map<coord, int, myhash<coord>> m{{{0, 0}, 1}, {{0, 1}, 2}, {{2, 1}, 3}};
 #endif
     for (const auto &[key, value] : m)
     {
