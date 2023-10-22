@@ -24,11 +24,11 @@ std::multimap<size_t, std::string> get_sentence_length(const std::string &conten
     while (it1 != it2 && std::distance(it1, it2) > 0)
     {
         std::string s{filter_ws(
-            {it1, it2})}; // iterators from std::string point to individual characters so {it1, it2} gives a substring
+           {it1, it2})}; // iterators from std::string point to individual characters so {it1, it2} gives a substring
         if (s.length() > 0)
         {
             const auto words(std::count(s.begin(), s.end(), ' ') + 1);
-            ret.emplace(std::pair<size_t, std::string>(words, s));
+            ret.emplace(std::pair<size_t, std::string>(words, std::move(s)));
         }
 
         it1 = std::next(it2 + 1);
