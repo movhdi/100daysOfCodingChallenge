@@ -22,5 +22,7 @@ int main()
         std::cout << it << ", ";
     }
     std::cout << std::endl;
+    std::copy(std::begin(v), std::end(v), std::ostream_iterator<int>{std::cout, ", "});
+    std::cout << std::endl;
     return 0;
 }
