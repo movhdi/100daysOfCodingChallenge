@@ -64,6 +64,23 @@ fib_range::~fib_range()
 
 int main()
 {
+    /*
+        Consider that we write the following code:
+
+        for (auto x : range) { code_block; }
+
+        The compiler will evaluate it to the following:
+
+        {
+            auto __begin = std::begin(range);
+            auto __end = std::end(range);
+            for ( ; __begin != __end; ++__begin)
+            {
+                auto x = *__begin;
+                code_block
+            }
+        }
+    */
     for (const auto i : fib_range{10})
     {
         std::cout << i << ", ";
