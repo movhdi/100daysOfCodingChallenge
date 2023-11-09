@@ -3,14 +3,14 @@
 #include <iterator>
 #include <numeric>
 
-// template <typename T>
-// T transform_if(T t, auto if_function, auto unaryOp)
-// {
-//     T temp, result;
-//     std::copy_if(std::begin(t), std::end(t), std::back_inserter(temp), if_function);
-//     std::transform(std::begin(temp), std::end(temp), std::back_inserter(result), unaryOp);
-//     return result;
-// }
+template <typename T>
+T transform_if(T t, auto if_function, auto unaryOp)
+{
+    T temp, result;
+    std::copy_if(std::begin(t), std::end(t), std::back_inserter(temp), if_function);
+    std::transform(std::begin(temp), std::end(temp), std::back_inserter(result), unaryOp);
+    return result;
+}
 
 template <typename T>
 auto map(T fn)
@@ -49,6 +49,12 @@ int main()
                     end_it,
                     std::ostream_iterator<int>{std::cout, ", "},
                     filter(even)(map(twice)(copy_and_advance)));
+    std::cout << std::endl;
+    std::vector<int> v{1, 2, 3, 4, 5, 6, 7, 8, 9};
+    for (auto it : transform_if(v, even, twice))
+    {
+        std::cout << it << ", ";
+    }
     std::cout << std::endl;
     return 0;
 }
