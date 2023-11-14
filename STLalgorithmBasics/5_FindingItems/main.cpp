@@ -61,5 +61,14 @@ int main()
         auto found_large(std::find_if(std::begin(c), std::end(c), population_large(2000000)));
         print_city(found_large);
     }
+    std::vector<int> v{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    auto print_int(opt_print(v));
+    bool contains_4(std::binary_search(std::begin(v),std::end(v), 4)); // this algorithm needs the container to be sorted
+    std::cout << std::boolalpha << contains_4 << '\n';
+    auto [lower_it, upper_it] = std::equal_range(std::begin(v),std::end(v), 4);
+    print_int(lower_it);
+    print_int(upper_it);
+    print_int(std::lower_bound(std::begin(v), std::end(v), 7));
+    print_int(std::upper_bound(std::begin(v), std::end(v), 7));
     return 0;
 }
