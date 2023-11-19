@@ -69,7 +69,9 @@ public:
         {
             return {};
         }
-        return found->second.subtrie(std::next(it),end);
+        return found->second.subtrie(std::next(it),end); // backtracking in exploring other child nodes takes place
+                                                         //in the print function this function just returns the trie
+                                                         //class at the splitting node
     }
     template <typename C>
     auto subtrie(const C &container)
