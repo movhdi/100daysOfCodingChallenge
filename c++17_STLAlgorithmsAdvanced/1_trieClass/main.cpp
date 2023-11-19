@@ -35,7 +35,7 @@ public:
     }
     void print(std::vector<T> &v) const
     {
-        if (tries.empty()) // this is the terminating condition
+        if (tries.empty()) // this is the terminating condition it means we are at the leaf node
         {
             std::copy(
                 std::begin(v),
@@ -46,7 +46,8 @@ public:
         }
         for (const auto &node : tries)
         {
-            v.push_back(node.first); // this is where all data in the lifetime of recursion is recorded
+            v.push_back(node.first); // this is where all data in the lifetime of recursion is recorded.
+                                     // this first node is selected by std::map using "first" iterator
             node.second.print(v);
             v.pop_back(); // this empties the vector on the way back to first recursive calling function instance
         }
@@ -84,7 +85,7 @@ int main(int argc, char *argv[])
     t.insert({"hi", "i", "am", "great", "thanks"});
     t.insert({"what", "are", "you", "doing"});
     t.insert({"i", "am", "watching", "a", "movie"});
-    std::cout << "recorder sentences:\n";
+    std::cout << "recorded sentences:\n";
     t.print();
     std::cout << "\npossible suggestions after \"hi\":\n";
     if (auto st(t.subtrie(std::initializer_list<std::string>{"hi"}));st)
