@@ -18,12 +18,12 @@ static void deadlock_func_1()
 
 static void deadlock_func_2()
 {
-    std::cout << "bad f1 acquiring mutex b" << std::endl;
+    std::cout << "bad f2 acquiring mutex b" << std::endl;
     std::lock_guard<std::mutex> lb{mut_b};
     std::this_thread::sleep_for(100ms);
-    std::cout << "bad f1 acquiring mutex a" << std::endl;
+    std::cout << "bad f2 acquiring mutex a" << std::endl;
     std::lock_guard<std::mutex> la{mut_a};
-    std::cout << "bad f1 got both mutexes" << std::endl;
+    std::cout << "bad f2 got both mutexes" << std::endl;
 }
 
 static void sane_func_1()
