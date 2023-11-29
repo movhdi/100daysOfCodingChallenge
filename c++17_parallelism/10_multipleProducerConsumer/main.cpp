@@ -34,10 +34,12 @@ static void producer(size_t id, size_t items, size_t stock)
 {
     for (size_t i = 0; i < items; i++)
     {
-        std::unique_lock<std::mutex> l{q_mutex};
-        go_produce.wait(l, [&]() { return q.size() < stock; });
-        q.push(id * 100 + i);
-        pcout{} << "   producer " << id << "--> item " << std::setw(3) << q.back() << '\n';
+        {
+            std::unique_lock<std::mutex> l{q_mutex};
+            go_produce.wait(l, [&]() { return q.size() < stock; });
+            q.push(id * 100 + i);
+            pcout{} << "   producer " << id << "--> item " << std::setw(3) << q.back() << '\n';
+        }
         go_consume.notify_all();
         std::this_thread::sleep_for(90ms);
     }
@@ -53,14 +55,16 @@ static void consumer(size_t id)
 {
     while (!production_stopped || !q.empty())
     {
-        std::unique_lock<std::mutex> l{q_mutex};
-        if (go_consume.wait_for(l,1s, [](){return !q.empty();}))
         {
-            pcout{} <<"          item " << std::setw(3) << q.front() <<"--> consumer " << id << std::endl;
-            q.pop();
-            go_produce.notify_all();
-            std::this_thread::sleep_for(100ms);
+            std::unique_lock<std::mutex> l{q_mutex};
+            if (go_consume.wait_for(l,1s, [](){return !q.empty();}))
+            {
+                pcout{} <<"                 item " << std::setw(3) << q.front() <<" --> consumer " << id << std::endl;
+                q.pop();
+                go_produce.notify_all();
+            }
         }
+        std::this_thread::sleep_for(130ms);
     }
     pcout{} << "EXIT: consumer " << id << '\n';
 }
@@ -71,7 +75,7 @@ int main()
     std::vector<std::thread> consumers;
     for (size_t i = 0; i < 3; i++)
     {
-        producers.emplace_back(producer, i, 10, 4);
+        producers.emplace_back(producer, i, 15, 5);
     }
     for (size_t i = 0; i < 5; i++)
     {
