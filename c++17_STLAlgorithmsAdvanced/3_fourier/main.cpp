@@ -34,7 +34,24 @@ public:
     }
 
 };
+/*
+a possible implementation of std::transform is
 
+template <typename InputIt, typename OutputIt, typename UnaryOperation>
+
+OutputIt my_transform(InputIt first, InputIt last, OutputIt result, UnaryOperation op) {
+    while (first != last) {
+        *result++ = op(*first++);
+    }
+    return result;
+}
+
+here in our example we have implemented numIterator which returns a size_t once dereferenced!
+to_ft() also takes a size_t as argument, this argument is passed to to_ft() inside the implementation of std::transform
+here every to_ft() is itself a std::accumulate.
+here is where a nested for loop takes place using algorithms!
+
+*/
 csignal fourier_transform(csignal const &s, bool back = false)
 {
     csignal t(s.size());
