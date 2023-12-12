@@ -24,7 +24,7 @@ std::ostream& operator<<(std::ostream &os, const bork &b)
 
 int main()
 {
-    const std::vector<int> v{1, 2, 3, 4, 5};
+    const std::vector<int> v{1, 2, 3, 4, 5, 6};
     std::ostream_iterator<int> oit{std::cout};
     for (const auto &it : v)
     {
@@ -57,3 +57,39 @@ int main()
     std::copy(std::begin(v), std::end(v), std::ostream_iterator<bork>{std::cout});
     return 0;
 }
+
+/*
+Moral of the story:
+
+// Here is a simplified version of std::copy()
+
+template <class InputIt, class OutputIt>
+OutputIt copy(InputIt first, InputIt last, OutputIt d_first) {
+    while (first != last) {
+        *d_first = *first;
+        ++first;
+        ++d_first;
+    }
+    return d_first;
+}
+
+// Pseudocode for std::copy
+template <class InputIt, class OutputIt>
+OutputIt copy(InputIt first, InputIt last, OutputIt d_first) {
+    while (first != last) {
+        // Implicit conversion happens here
+        bork temp(*first);  // Convert int to bork using bork's constructor
+
+        // Write the bork object to the output stream
+        *d_first = temp;
+
+        // Move to the next element in the source range
+        ++first;
+
+        // Move to the next position in the output stream
+        ++d_first;
+    }
+    return d_first;
+}
+
+*/
