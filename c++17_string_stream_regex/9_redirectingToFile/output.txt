@@ -1,0 +1,2 @@
+Only visible in output.txt
+lots of logs and texts on output
