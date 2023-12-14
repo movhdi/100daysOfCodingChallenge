@@ -9,9 +9,9 @@ private:
     buffType buf_backup;
 public:
     explicit redirect_cout_region(const std::string &filename)
-        : ofs{filename},
+        :
         buf_backup(std::cout.rdbuf(ofs.rdbuf()))
-    {}
+    {ofs.open(filename);}
     redirect_cout_region()
         : ofs{},
         buf_backup(std::cout.rdbuf(ofs.rdbuf()))
@@ -26,6 +26,7 @@ public:
 void my_output_heavy_function()
 {
     std::cout << "lots of logs and texts on output\n";
+    std::cout << "yeah this file is written by me, MAHDI";
 }
 
 int main()
