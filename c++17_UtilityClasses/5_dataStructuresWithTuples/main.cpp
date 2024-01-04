@@ -11,7 +11,11 @@ template <typename T, typename... Ts>
 void print_args(std::ostream &os, const T &v, const Ts &...vs)
 {
     os << v;
-    (void)std::initializer_list<int>{((os << "," << vs), 0)...};
+    // using pack expansion
+    // (void)std::initializer_list<int>{((os << "," << vs), 0)...};
+
+    // using fold expression
+    ((os << "," << vs),...);
 }
 
 template <typename... Ts>
