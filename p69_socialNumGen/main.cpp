@@ -165,14 +165,14 @@ public:
     virtual ~social_number_generator_factory()
     {
     }
-    social_number_generator *get_generator(
+    std::unique_ptr<social_number_generator>& get_generator(
         std::string_view country) // I had written this line as std::unique_ptr<social ...>
                                   // and returned with std::move(), it did not give any output! I do not know why
     {
         auto it = inner.find(country.data());
         if (!(it == std::end(inner)))
         {
-            return it->second.get();
+            return it->second;
         }
         throw std::runtime_error("Invalid Country");
     }
