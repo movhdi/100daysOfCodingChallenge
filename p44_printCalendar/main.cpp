@@ -21,6 +21,7 @@ void print_calendar(int const year, unsigned int const month)
     // second step: determin last day of the month
     auto lastday = date::year_month_day_last(date::year{year}, date::month_day_last{date::month{month}});
     // printing the calendar
+    std::cout << lastday.month() << std::endl;
     std::cout << "Mon Tue Wed Thu Fri Sat Sun" << std::endl;
 
     unsigned int index{1};
@@ -38,7 +39,7 @@ void print_calendar(int const year, unsigned int const month)
             index = 0;
         }
     }
-    std::cout << std::endl;
+    std::cout << '\n' <<std::endl;
 }
 int main()
 {
