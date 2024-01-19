@@ -5,7 +5,7 @@
 #include <iostream>
 
 
-auto day_of_week(int y, unsigned int m, unsigned int d)
+auto day_of_week(int const y, unsigned const int m, unsigned const int d)
 {
     auto dt = date::sys_days{date::year{y}/ date::month{m}/ date::day{d}};
     auto date = iso_week::year_weeknum_weekday{dt};
