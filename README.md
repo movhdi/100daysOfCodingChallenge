@@ -74,9 +74,9 @@ Well, the last chapter was finished on 14-10-2023, it means this chapter took a 
 
 |   |                Date and Time        |  Status            |
 |---|-----------------------------------------|--------------------|
-|39  | Measuring function execution time     |  |
-|40  | Number of days between two dates | |
-|41  | Day of the week     |  |
-|42  | Day and week of the year | |
+|39  | Measuring function execution time     | :heavy_check_mark: |
+|40  | Number of days between two dates | :heavy_check_mark: |
+|41  | Day of the week     | :heavy_check_mark: |
+|42  | Day and week of the year | :heavy_check_mark: |
 |43  | meeting time for multiple time zones| |
-|44  | Monthly Calendar | |
+|44  | Monthly Calendar | :heavy_check_mark: |
