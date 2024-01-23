@@ -42,8 +42,9 @@ public:
     // swap
     void swap(priority_queue& other)
     {
-        this->data.swap(other->data);
-        std::swap(comparer) = other->comparer;
+        // this->data.swap(other->data);
+        std::swap(this->data, other.data);
+        std::swap(comparer,  other->comparer);
     }
     // size
     typename std::vector<T>::size_type size() const
@@ -57,6 +58,12 @@ public:
     {
     }
 };
+template <typename T, typename compare>
+void swap(priority_queue<T, compare>& lhs, priority_queue<T,compare>& rhs)
+{
+    lhs.swap(rhs);
+}
+
 
 
 int main()
