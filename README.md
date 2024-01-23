@@ -80,3 +80,24 @@ Well, the last chapter was finished on 14-10-2023, it means this chapter took a 
 |42  | Day and week of the year | :heavy_check_mark: |
 |43  | meeting time for multiple time zones| |
 |44  | Monthly Calendar | :heavy_check_mark: |
+
+Today is 23-01-2024, I just finished Date and Time excercises. It has taken a long time since my last writing here. That is because during this period of time I started reading the book C++17 STL cookbook. I got through all the excercises, it was about 500 pages from containers to iterators all the way down to conc.urrency and filesystem. I started to read also another book named "c++ standard library, A tutorial and reference". I have dived deep in the C++ books, honestly I can say that I have just grasped a big picture! Yet many more left to learn. Yet need to make my hands dirty. The next chapter is about algorithms and datastructures. For solving any data structure (here priority_queue, set, map, red black tree, trie, tree binary search tree) I am going through other different books and courses to learn about them. So I might not be able to meet my time goals.
+
+|   |                Algorithms and Data Structures       |  Status            |
+|---|-----------------------------------------|--------------------|
+|45  | priority queue | :heavy_check_mark: |
+|46  | circular buffer |  |
+|47  | double buffer     |  |
+|48  | The most frequent element in a range |  |
+|49  | Text histogram | |
+|50  | Filtering a list of phone numbers |  |
+|51  | Transforming a list of phone numbers |  |
+|52  | Generating all the permutations of a string |  |
+|53  | Average rating of movies|  |
+|54  | Pairwise algorithm |  |
+|55  | Zip algorithm |  |
+|56  | Select algorithm |  |
+|57  | Sort algorithm |  |
+|58  | The shortest path between nodes |  |
+|59  | The Weasel program |  |
+|60  | The Game of Life |  |
