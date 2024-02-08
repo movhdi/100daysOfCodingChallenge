@@ -53,7 +53,7 @@ public:
     const_reference operator->() const // cppreference.org: The overload of operator -> must either return a raw pointer, or return an object
                    // (by reference or by value) for which operator -> is in turn overloaded.
     {
-        return buffer_.data[_index];
+        return buffer_.data[_index]; // ????
     }
     // operator==()
     bool operator==(const self_type &other)
@@ -78,6 +78,24 @@ class circular_buffer
 public:
     explicit circular_buffer(size_t size) noexcept : container_size(size), data(container_size)
     {
+    }
+    bool empty() const noexcept
+    {
+        return buffer_size == 0;
+    }
+
+    bool full() const
+    {
+        return (buffer_size == container_size) ? true : false;
+    }
+    size_t size() const
+    {
+        return buffer_size;
+    }
+
+    size_t capacity() const
+    {
+        return container_size;
     }
     void push(const T &t) noexcept
     {
