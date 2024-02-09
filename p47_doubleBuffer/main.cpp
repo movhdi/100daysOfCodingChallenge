@@ -29,14 +29,14 @@ public:
         std::copy(std::begin(rdbuff), std::end(rdbuff), it);
     }
 
-    void write(double_buffer::pointer ptr, size_t size)
+    void write(T const * const ptr, size_t size)
     {
         std::unique_lock<std::mutex> lg(mt);
-        // for (size_t i = 0; i < size; i++, ++ptr)
+        auto length = std::min(size, wrbuff.size());
+        // for (size_t i = 0; i < length; i++, ++ptr)
         // {
         //     wrbuff.insert(std::end(wrbuff),*ptr);
         // }
-        auto length = std::min(size, wrbuff.size());
         std::copy(ptr, ptr + length, wrbuff.begin());
         wrbuff.swap(rdbuff);
     }
