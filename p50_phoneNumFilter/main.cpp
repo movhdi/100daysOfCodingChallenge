@@ -10,7 +10,7 @@ std::vector<std::string> filter_numbers(std::vector<std::string> const &nums, st
     std::vector<std::string> result;
     std::copy_if(std::begin(nums), std::end(nums), std::back_inserter(result), [&code](std::string const & str){
         auto charCount = std::accumulate(std::begin(str), std::end(str), 0ull, [&code](int count, const char & ch){
-            if (std::isalnum(ch))
+            if (std::isdigit(ch))
             {
                 return ++count;
             }else
