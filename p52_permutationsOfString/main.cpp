@@ -20,8 +20,8 @@ void print_permutations_recursive(std::string str, std::string perm)
     {
         for (size_t i = 0; i < str.size(); ++i)
         {
-            print_permutations_recursive(str.substr(1), perm + str[0]);
-            std::rotate(std::begin(str), std::begin(str) + 1, std::end(str));
+            print_permutations_recursive(str.substr(1), perm + str[0]); // the main recursion!
+            std::rotate(std::begin(str), std::begin(str) + 1, std::end(str)); // preparing input for the next recursion
         }
     }
 }
