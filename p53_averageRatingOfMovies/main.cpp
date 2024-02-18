@@ -9,7 +9,7 @@
 double truncated_mean(std::vector<int> ratings, double const percent)
 {
     std::sort(std::begin(ratings), std::end(ratings));
-    auto deletionNumber = static_cast<size_t> (ratings.size() * percent);
+    auto deletionNumber = static_cast<long int> (ratings.size() * percent + 0.5);
     auto first = std::begin(ratings);
     ratings.erase(first, std::next(first,deletionNumber));
     auto last = std::end(ratings);
