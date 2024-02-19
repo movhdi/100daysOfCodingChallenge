@@ -86,15 +86,15 @@ Today is 23-01-2024, I just finished Date and Time excercises. It has taken a lo
 |   |                Algorithms and Data Structures       |  Status            |
 |---|-----------------------------------------|--------------------|
 |45  | priority queue | :heavy_check_mark: |
-|46  | circular buffer |  |
-|47  | double buffer     |  |
-|48  | The most frequent element in a range |  |
-|49  | Text histogram | |
-|50  | Filtering a list of phone numbers |  |
-|51  | Transforming a list of phone numbers |  |
-|52  | Generating all the permutations of a string |  |
-|53  | Average rating of movies|  |
-|54  | Pairwise algorithm |  |
+|46  | circular buffer | :heavy_check_mark: |
+|47  | double buffer     | :heavy_check_mark: |
+|48  | The most frequent element in a range | :heavy_check_mark: |
+|49  | Text histogram | :heavy_check_mark: |
+|50  | Filtering a list of phone numbers | :heavy_check_mark: |
+|51  | Transforming a list of phone numbers | :heavy_check_mark: |
+|52  | Generating all the permutations of a string | :heavy_check_mark: |
+|53  | Average rating of movies| :heavy_check_mark: |
+|54  | Pairwise algorithm | :heavy_check_mark: |
 |55  | Zip algorithm |  |
 |56  | Select algorithm |  |
 |57  | Sort algorithm |  |
