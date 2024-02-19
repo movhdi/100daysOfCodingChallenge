@@ -6,9 +6,7 @@ auto zipElement(It1 it1, It1 endit1, It2 it2, It2 endit2,  Oit backinserteritera
 {
     while (it1 != endit1 && it2 != endit2)
     {
-        ++backinserteriterator = {*it1,*it2};
-        ++it1;
-        ++it2;
+        ++backinserteriterator = {*it1++,*it2++};
     }
 }
 
