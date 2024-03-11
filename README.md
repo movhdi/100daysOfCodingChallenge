@@ -95,9 +95,9 @@ Today is 23-01-2024, I just finished Date and Time excercises. It has taken a lo
 |52  | Generating all the permutations of a string | :heavy_check_mark: |
 |53  | Average rating of movies| :heavy_check_mark: |
 |54  | Pairwise algorithm | :heavy_check_mark: |
-|55  | Zip algorithm |  |
-|56  | Select algorithm |  |
-|57  | Sort algorithm |  |
+|55  | Zip algorithm | :heavy_check_mark: |
+|56  | Select algorithm | :heavy_check_mark: |
+|57  | Sort algorithm | :heavy_check_mark: |
 |58  | The shortest path between nodes |  |
 |59  | The Weasel program |  |
 |60  | The Game of Life |  |
