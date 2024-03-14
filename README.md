@@ -99,5 +99,5 @@ Today is 23-01-2024, I just finished Date and Time excercises. It has taken a lo
 |56  | Select algorithm | :heavy_check_mark: |
 |57  | Sort algorithm | :heavy_check_mark: |
 |58  | The shortest path between nodes |  |
-|59  | The Weasel program |  |
+|59  | The Weasel program | :heavy_check_mark: |
 |60  | The Game of Life |  |
