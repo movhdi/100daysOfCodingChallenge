@@ -1,12 +1,12 @@
-#include <random>
+#include <algorithm>
+#include <array>
+#include <iomanip>
 #include <iostream>
+#include <numeric>
+#include <random>
 #include <string>
 #include <string_view>
-#include <array>
-#include <algorithm>
 #include <vector>
-#include <iomanip>
-#include <numeric>
 
 
 class weasel
@@ -18,9 +18,10 @@ class weasel
     std::uniform_int_distribution<int> chardist;
     std::uniform_real_distribution<double> ratedist;
     std::mt19937 rndeng;
+
 public:
     weasel() = delete;
-    weasel(std::string t) : target(t), chardist(0,26), ratedist(0,100)
+    weasel(std::string t) : target(t), chardist(0, 26), ratedist(0, 100)
     {
         // a std::random_device could be used to generate seed data(seq)
         std::random_device rd;
@@ -30,7 +31,8 @@ public:
         rndeng.seed(seeds);
     }
     ~weasel()
-    {}
+    {
+    }
 
     void run(size_t runtimes)
     {
@@ -47,6 +49,7 @@ public:
         }
         (void)runtimes;
     }
+
 private:
     std::string fittest(std::vector<std::string> population) const
     {
@@ -87,7 +90,8 @@ private:
                 if (prob <= mutateProb)
                 {
                     offspring[j] = src[chardist(rndeng)];
-                }else
+                }
+                else
                 {
                     offspring[j] = state[j];
                 }
