@@ -100,4 +100,21 @@ Today is 23-01-2024, I just finished Date and Time excercises. It has taken a lo
 |57  | Sort algorithm | :heavy_check_mark: |
 |58  | The shortest path between nodes |  |
 |59  | The Weasel program | :heavy_check_mark: |
-|60  | The Game of Life |  |
+|60  | The Game of Life | :heavy_check_mark: |
+
+Today I finished algorithms chapter. In the meanwhile I tried to learn cmake and I got through it deeply to some extent. I am ready now to go for the next chapter. I will try to learn as much as I can, and I am eager to reach cryptography chapter soon in the future. The next chapter is about concurrency, I hope it will not be too difficult. No worries, let's go.
+|   |                Chapter 7 Concurrency       |  Status            |
+|---|-----------------------------------------|--------------------|
+|61  | Parallel transform algorithm                 |  |
+|62 | Parallel min and max element algorithms using threads |  |
+|63  | Parallel min and max element algorithms using asynchronous functions |  |
+|64  | Parallel sort algorithm         |  |
+|65  | Thread-safe logging to the console    |  |
+|66  | Customer service system     |  |
+
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+/home/med/100daysOfCodingChallenge/p60_theGameOfLife/build/CMakeFiles/buildTarget.dir
+/home/med/100daysOfCodingChallenge/p60_theGameOfLife/build/CMakeFiles/edit_cache.dir
+/home/med/100daysOfCodingChallenge/p60_theGameOfLife/build/CMakeFiles/rebuild_cache.dir
