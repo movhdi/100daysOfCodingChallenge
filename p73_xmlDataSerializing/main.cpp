@@ -38,7 +38,7 @@ std::vector<book> deserialize(std::string_view path)
 
 void printBooks(std::vector<book> books)
 {
-    for (auto &item : books)
+    for (const auto &item : books)
     {
         std::cout << "Author: " << item.author << std::endl;
         std::cout << "Title: " << item.title << std::endl;
