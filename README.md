@@ -105,16 +105,21 @@ Today is 23-01-2024, I just finished Date and Time excercises. It has taken a lo
 Today I finished algorithms chapter. In the meanwhile I tried to learn cmake and I got through it deeply to some extent. I am ready now to go for the next chapter. I will try to learn as much as I can, and I am eager to reach cryptography chapter soon in the future. The next chapter is about concurrency, I hope it will not be too difficult. No worries, let's go.
 |   |                Chapter 7 Concurrency       |  Status            |
 |---|-----------------------------------------|--------------------|
-|61  | Parallel transform algorithm                 |  |
+|61  | Parallel transform algorithm                 | :heavy_check_mark: |
 |62 | Parallel min and max element algorithms using threads |  |
 |63  | Parallel min and max element algorithms using asynchronous functions |  |
 |64  | Parallel sort algorithm         |  |
 |65  | Thread-safe logging to the console    |  |
 |66  | Customer service system     |  |
 
+Day by day I am getting better at c++ and recently at cmake! On the other hand I am very interested in cryptography, so I jumped to problem 91 and solved user credential challenge. Little by little I will solve other challenges of this chapter also, and eveny may before finishing concurrency challenges.
 
-
-
-
-
-
+|   |                Chapter 7 Concurrency       |  Status            |
+|---|-----------------------------------------|--------------------|
+|88  | Caesar cipher                 |  |
+|89 | Vigenère cipher |  |
+|90  | Base64 encoding and decoding |  |
+|91  | Validating user credentials | :heavy_check_mark: |
+|92  | Computing file hashes    |  |
+|93  | Encrypting and decrypting files     |  |
+|94  | File signing    |  |
