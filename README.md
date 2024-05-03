@@ -106,7 +106,7 @@ Today I finished algorithms chapter. In the meanwhile I tried to learn cmake and
 |   |                Chapter 7 Concurrency       |  Status            |
 |---|-----------------------------------------|--------------------|
 |61  | Parallel transform algorithm                 | :heavy_check_mark: |
-|62 | Parallel min and max element algorithms using threads |  |
+|62 | Parallel min and max element algorithms using threads | :heavy_check_mark: |
 |63  | Parallel min and max element algorithms using asynchronous functions |  |
 |64  | Parallel sort algorithm         |  |
 |65  | Thread-safe logging to the console    |  |

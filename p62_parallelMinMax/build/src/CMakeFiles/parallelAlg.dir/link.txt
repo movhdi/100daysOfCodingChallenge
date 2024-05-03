@@ -1,0 +1,2 @@
+/usr/bin/ar qc libparallelAlg.a CMakeFiles/parallelAlg.dir/parallelAlg.cpp.o
+/usr/bin/ranlib libparallelAlg.a

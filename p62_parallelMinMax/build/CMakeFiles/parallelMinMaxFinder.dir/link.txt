@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/parallelMinMaxFinder.dir/main.cpp.o CMakeFiles/parallelMinMaxFinder.dir/src/parallelAlg.cpp.o -o parallelMinMaxFinder  src/libparallelAlg.a -pthread 

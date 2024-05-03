@@ -1,0 +1,6 @@
+/home/med/100daysOfCodingChallenge/p62_parallelMinMax/build/CMakeFiles/parallelMinMaxFinder.dir
+/home/med/100daysOfCodingChallenge/p62_parallelMinMax/build/CMakeFiles/edit_cache.dir
+/home/med/100daysOfCodingChallenge/p62_parallelMinMax/build/CMakeFiles/rebuild_cache.dir
+/home/med/100daysOfCodingChallenge/p62_parallelMinMax/build/src/CMakeFiles/parallelAlg.dir
+/home/med/100daysOfCodingChallenge/p62_parallelMinMax/build/src/CMakeFiles/edit_cache.dir
+/home/med/100daysOfCodingChallenge/p62_parallelMinMax/build/src/CMakeFiles/rebuild_cache.dir
