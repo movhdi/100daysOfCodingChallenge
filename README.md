@@ -112,9 +112,9 @@ Today I finished algorithms chapter. In the meanwhile I tried to learn cmake and
 |65  | Thread-safe logging to the console    |  |
 |66  | Customer service system     |  |
 
-Day by day I am getting better at c++ and recently at cmake! On the other hand I am very interested in cryptography, so I jumped to problem 91 and solved user credential challenge. Little by little I will solve other challenges of this chapter also, and eveny may before finishing concurrency challenges.
+Day by day I am getting better at c++ and recently at cmake! On the other hand I am very interested in cryptography, so I jumped to problem 91 and solved user credential challenge. Little by little I will solve other challenges of this chapter also, and even may before finishing concurrency challenges.
 
-|   |                Chapter 7 Concurrency       |  Status            |
+|   |                Chapter 11 Cryptography       |  Status            |
 |---|-----------------------------------------|--------------------|
 |88  | Caesar cipher                 |  |
 |89 | Vigenère cipher |  |
