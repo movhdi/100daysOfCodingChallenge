@@ -117,7 +117,7 @@ Day by day I am getting better at c++ and recently at cmake! On the other hand I
 |   |                Chapter 11 Cryptography       |  Status            |
 |---|-----------------------------------------|--------------------|
 |88  | Caesar cipher                 | :heavy_check_mark: |
-|89 | Vigenère cipher |  |
+|89 | Vigenère cipher | :heavy_check_mark: |
 |90  | Base64 encoding and decoding |  |
 |91  | Validating user credentials | :heavy_check_mark: |
 |92  | Computing file hashes    |  |
