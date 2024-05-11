@@ -18,11 +18,7 @@ CipherBase::CipherBase() {
     {
         std::cerr <<"From cipherbase ctor: "<< e.what() << '\n';
     }
-    set_cipher_config_base(cipher_config);
-}
-
-CipherBase::CipherBase(const cipherConfig& cipher_config) {
-    this->cipher_config = cipher_config;
+    // set_cipher_config_base(cipher_config);
 }
 
 void CipherBase::set_cipher_config_base(const cipherConfig& cipher_config)
@@ -31,7 +27,8 @@ void CipherBase::set_cipher_config_base(const cipherConfig& cipher_config)
     {
         /* code */
         this->cipher_config = cipher_config;
-        debug(cipher_config.shiftCount)
+        // debug(this->cipher_config.shiftCount)
+        std::cout <<"\033[1;31mCipherBase::set_cipher_config_base: " << cipher_config.shiftCount  << "\033[0m"<< std::endl;
     }
     catch(const std::exception& e)
     {
@@ -44,7 +41,7 @@ cipherConfig CipherBase::get_cipher_config_base() {
 }
 
 CipherBase::~CipherBase() {
-    // debug("CipherBase DTOR called")
+    debug("CipherBase DTOR called")
 }
 
 } // cryptography

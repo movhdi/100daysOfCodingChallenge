@@ -13,8 +13,8 @@ namespace cryptography
 class VigenerCipher : public CipherBase
 {
 protected:
-    std::unique_ptr<CaesarCipher> caesarEngine;
-    void set_cipher_config(const cipherConfig& cipehr_config) override;
+    std::unique_ptr<CipherBase> caesarEngine;
+    void set_cipher_config(const cipherConfig& cipher_config) override;
 public:
     VigenerCipher(const cipherConfig& cipher_config);
     
@@ -23,9 +23,8 @@ public:
 
     cipherConfig get_cipher_config() override;
 
-    std::string VigenerTableBuilder();
-    ~VigenerCipher(){
-        // debug("vigener DTOR called")
+    virtual ~VigenerCipher(){
+        debug("vigener DTOR called")
     }
 };
 

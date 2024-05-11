@@ -5,14 +5,14 @@
 
 namespace cryptography {
 
-VigenerCipher::VigenerCipher(const cipherConfig& cipher_config) : CipherBase(cipher_config)
+VigenerCipher::VigenerCipher(const cipherConfig& cipher_config) : CipherBase()
 {
-    debug(this->cipher_config.shiftCount)
-    this->set_cipher_config(cipher_config);
-    this->caesarEngine = std::make_unique<CaesarCipher>(cipher_config);
+    debug(cipher_config.shiftCount)
+    set_cipher_config(cipher_config);
+    caesarEngine = std::make_unique<CaesarCipher>(cipher_config);
 }
 
-void VigenerCipher::set_cipher_config(const cipherConfig& cipehr_config) {
+void VigenerCipher::set_cipher_config(const cipherConfig& cipher_config) {
     set_cipher_config_base(cipher_config);
 }
 
@@ -20,11 +20,16 @@ std::string VigenerCipher::encrypt(std::string str) {
     std::string result;
     for (size_t i{}; i < str.size(); ++i) {
         this->cipher_config.shiftCount =
-            this->cipher_config.vigener_key[i % this->cipher_config.vigener_key.size()] -
-            'A';
-        debug(this->cipher_config.shiftCount)
-        debug(this->cipher_config.vigener_key.size())
-        result += caesarEngine->encrypt(std::to_string(str[i]));
+            this->cipher_config.vigener_key[i % this->cipher_config.vigener_key.size()] - 'A';
+        this->caesarEngine->set_cipher_config(this->cipher_config);
+        std::cout << "shift     \n";
+        debug(this->cipher_config.shiftCount) 
+        debug(caesarEngine->get_cipher_config().shiftCount)
+        std::cout << "size      \n";
+        debug(this->cipher_config.vigener_key.size())  
+        debug(caesarEngine->get_cipher_config().shiftCount)
+        result += caesarEngine->encrypt(std::string(1,str[i]));
+        std::cout << result << std::endl;
     }
     return result;
 }
@@ -35,29 +40,17 @@ cipherConfig VigenerCipher::get_cipher_config() {
 
 std::string VigenerCipher::decrypt(std::string str)
 {   
-    const auto vigenereTable = this->VigenerTableBuilder();
     std::string result;
-        for (size_t i{}; i < str.size(); ++i) {
+    for (size_t i{}; i < str.size(); ++i) {
         this->cipher_config.shiftCount =
-            this->cipher_config.vigener_key[i % this->cipher_config.vigener_key.size()] - 'A';
+            this->cipher_config.vigener_key[i % cipher_config.vigener_key.size()] - 'A';
+        this->caesarEngine->set_cipher_config(cipher_config);
         debug(this->cipher_config.shiftCount)
         debug(this->cipher_config.vigener_key.size())
-        result += caesarEngine->decrypt(std::to_string(str[i]));
+        result += caesarEngine->decrypt(std::string(1,str[i]));
     }
     return result;
 }
 
-std::string VigenerCipher::VigenerTableBuilder()
-{
-    std::string result;
-    result.reserve(26*26);
-    // CaesarCipher caesarEng(cipherTemporary);
-    for (size_t i = 0; i < 26; i++)
-    {
-        this->cipher_config.shiftCount = i;
-        result+=caesarEngine->encrypt("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
-    }
-    return result;
-}
 
 } // cryptography

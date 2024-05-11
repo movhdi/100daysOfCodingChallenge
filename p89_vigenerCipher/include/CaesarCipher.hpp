@@ -6,14 +6,6 @@
 #include <iostream>
 #include <cstring>
 
-#ifdef DEBUG
-#define __FILENAME__ (strrchr(__FILE__, '/') ? strrchr(__FILE__, '/') + 1 : __FILE__)
-#define debug(x) std::cout <<"["<< __FILENAME__ <<"] " << "=> " <<"["<<__func__<<"] "<<(x) << std::endl;
-#else
-#define __FILENAME__
-#define debug(x) 
-#endif
-
 namespace cryptography {
 
 class CaesarCipher : public CipherBase
@@ -23,12 +15,14 @@ private:
 
 public:
     explicit CaesarCipher(const cipherConfig& cipher_config);
+    friend class VigenerCipher;
     
     virtual std::string encrypt(std::string str) override;
     virtual std::string decrypt(std::string str) override;
 
     cipherConfig get_cipher_config() override;
-    ~CaesarCipher(){
+    virtual ~CaesarCipher(){
+        debug("Caesar DTOR called")
         // debug("Caesar destructor called!")
         }
 };

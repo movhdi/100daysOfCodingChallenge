@@ -24,18 +24,18 @@ struct cipherConfig
 class CipherBase
 {
 protected:
-    cipherConfig cipher_config;
+    cipherConfig cipher_config; // FIXME: should be shared_ptr
 public:
     explicit CipherBase();
-    explicit CipherBase(const cipherConfig& cipher_config);
+    // explicit CipherBase(const cipherConfig& cipher_config);
     
+    virtual cipherConfig get_cipher_config() = 0;
     virtual std::string encrypt(std::string str) = 0;
     virtual std::string decrypt(std::string str) = 0;
 
     virtual void set_cipher_config(const cipherConfig& cipher_config) = 0;
     void set_cipher_config_base(const cipherConfig& cipher_config);
     
-    virtual cipherConfig get_cipher_config() = 0;
     cipherConfig get_cipher_config_base();
 
     virtual ~CipherBase();
