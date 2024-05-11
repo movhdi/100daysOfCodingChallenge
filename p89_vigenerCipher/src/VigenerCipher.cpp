@@ -29,8 +29,8 @@ std::string VigenerCipher::encrypt(std::string str) {
         debug(this->cipher_config.vigener_key.size())  
         debug(caesarEngine->get_cipher_config().shiftCount)
         result += caesarEngine->encrypt(std::string(1,str[i]));
-        std::cout << result << std::endl;
     }
+    std::cout << result << std::endl;
     return result;
 }
 
@@ -43,8 +43,8 @@ std::string VigenerCipher::decrypt(std::string str)
     std::string result;
     for (size_t i{}; i < str.size(); ++i) {
         this->cipher_config.shiftCount =
-            this->cipher_config.vigener_key[i % cipher_config.vigener_key.size()] - 'A';
-        this->caesarEngine->set_cipher_config(cipher_config);
+            this->cipher_config.vigener_key[i % this->cipher_config.vigener_key.size()] - 'A';
+        this->caesarEngine->set_cipher_config(this->cipher_config);
         debug(this->cipher_config.shiftCount)
         debug(this->cipher_config.vigener_key.size())
         result += caesarEngine->decrypt(std::string(1,str[i]));

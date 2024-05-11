@@ -35,7 +35,6 @@ std::string CaesarCipher::encrypt(std::string str) {
             result += ch;
         }
     }
-    std::cout << result << std::endl;
     return result;
 }
 
@@ -43,8 +42,7 @@ std::string CaesarCipher::decrypt(std::string str) {
     std::string result;
     for (const auto& ch : str) {
         if ('A' <= ch && ch <= 'Z') {
-            result += (ch - 64 - cipher_config.shiftCount) < 0 ? ((ch - 64 - cipher_config.shiftCount) % 26) + 64
-                                                               : ch - cipher_config.shiftCount;
+            result += 'A' + (26 + ch - 'A' - cipher_config.shiftCount) % 26;
         } else {
             result += ch;
         }

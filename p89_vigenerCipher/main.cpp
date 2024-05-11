@@ -14,7 +14,8 @@ int main() {
       std::unique_ptr<cryptography::CipherBase> caesarEngine = std::make_unique<cryptography::CaesarCipher>(caesar_cipher_config);      
       auto config = caesarEngine->get_cipher_config();
       debug(config.shiftCount);
-      std::cout << caesarEngine->encrypt("MAHDI iS A GOODMAN!");
+      std::cout << caesarEngine->encrypt("MAHDI iS A GOODMAN") << std::endl;
+      std::cout << caesarEngine->decrypt("PDKGL iV D JRRGPDQ!") << std::endl;
       assert("MAHDI iS A GOODMAN!" ==
           caesarEngine->decrypt(caesarEngine->encrypt("MAHDI iS A GOODMAN!")));
     }
@@ -23,13 +24,13 @@ int main() {
   // vigenere cipher exercise
     cryptography::cipherConfig vigenre_cipher_config{.shiftCount = 10,
       .vigener_key = "SAMPLE"};
-
-    std::string vigenerePlainText = "THECPPCHALLENGER";
+                                   //SAMPLESAMPLESAMP
+    std::string vigenerePlainText = "THECPPCHALLENGEr";
 
     std::unique_ptr<cryptography::CipherBase> vignerEngine = std::make_unique<cryptography::VigenerCipher>(vigenre_cipher_config);
     std::cout << vignerEngine->encrypt(vigenerePlainText) << std::endl;
-    std::cout << vignerEngine->decrypt("LHQRATUHMAWIFGQG") << std::endl;
-    
-    
+                                      //SAMPLESAMPLESAMP
+    std::cout << vignerEngine->decrypt("LHQRATUHMAWIFGQr") << std::endl;
+        
   return 0;
 }
