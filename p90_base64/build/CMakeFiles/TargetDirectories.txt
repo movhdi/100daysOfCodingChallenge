@@ -1,0 +1,3 @@
+/home/med/100daysOfCodingChallenge/p90_base64/build/CMakeFiles/boostLog.dir
+/home/med/100daysOfCodingChallenge/p90_base64/build/CMakeFiles/edit_cache.dir
+/home/med/100daysOfCodingChallenge/p90_base64/build/CMakeFiles/rebuild_cache.dir

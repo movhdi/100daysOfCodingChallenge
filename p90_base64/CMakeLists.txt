@@ -1,0 +1,16 @@
+cmake_minimum_required(VERSION 3.15)
+
+# set(CMAKE_CXX_STANDARD 17)
+project(boostLog VERSION 1.0.0 LANGUAGES CXX)
+
+# set(Boost_USE_STATIC_LIBS on)
+FIND_PACKAGE(Boost 1.69.0 COMPONENTS log log_setup REQUIRED)
+ADD_DEFINITIONS(-DBOOST_ALL_DYN_LINK)
+# ADD_DEFINITIONS(BOOST_ALL_DYN_LINK)
+ADD_DEFINITIONS(-DBOOST_LOG_DYN_LINK)
+# ADD_DEFINITIONS(-DBOOST_LOG_WITHOUT_WCHAR_T)
+
+INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIR})
+
+add_executable(boostLog main.cpp)
+target_link_libraries(boostLog  Boost::log Boost::log_setup)
