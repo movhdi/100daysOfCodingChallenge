@@ -1,0 +1,3 @@
+[submodule "p85_ReadFromDatabase/SQLiteCpp"]
+	path = p85_ReadFromDatabase/SQLiteCpp
+	url = https://github.com/SRombauts/SQLiteCpp.git

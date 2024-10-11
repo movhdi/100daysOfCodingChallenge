@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+90f17761f8c6383a8df51af21963e443 SQLiteCpp/CMakeFiles/SQLiteCpp_cppcheck

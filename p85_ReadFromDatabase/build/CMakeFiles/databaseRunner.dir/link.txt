@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/databaseRunner.dir/main.cpp.o -o databaseRunner  SQLiteCpp/libSQLiteCpp.a SQLiteCpp/sqlite3/libsqlite3.a -lpthread -ldl -pthread 
