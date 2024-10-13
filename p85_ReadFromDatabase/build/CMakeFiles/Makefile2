@@ -114,8 +114,8 @@ SQLiteCpp/sqlite3/clean: SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/clean
 # Target rules for target CMakeFiles/databaseRunner.dir
 
 # All Build rule for target.
-CMakeFiles/databaseRunner.dir/all: SQLiteCpp/CMakeFiles/SQLiteCpp.dir/all
 CMakeFiles/databaseRunner.dir/all: SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/all
+CMakeFiles/databaseRunner.dir/all: SQLiteCpp/CMakeFiles/SQLiteCpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=9,10 "Built target databaseRunner"
