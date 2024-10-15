@@ -65,15 +65,18 @@ CMAKE_BINARY_DIR = /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build
 # The main recursive "all" target.
 all: CMakeFiles/databaseRunner.dir/all
 all: SQLiteCpp/all
+all: lib/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: SQLiteCpp/preinstall
+preinstall: lib/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/databaseRunner.dir/clean
 clean: SQLiteCpp/clean
+clean: lib/clean
 .PHONY : clean
 
 #=============================================================================
@@ -111,19 +114,35 @@ SQLiteCpp/sqlite3/clean: SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/clean
 .PHONY : SQLiteCpp/sqlite3/clean
 
 #=============================================================================
+# Directory level rules for directory lib
+
+# Recursive "all" directory target.
+lib/all: lib/CMakeFiles/performanceEval.dir/all
+.PHONY : lib/all
+
+# Recursive "preinstall" directory target.
+lib/preinstall:
+.PHONY : lib/preinstall
+
+# Recursive "clean" directory target.
+lib/clean: lib/CMakeFiles/performanceEval.dir/clean
+.PHONY : lib/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/databaseRunner.dir
 
 # All Build rule for target.
-CMakeFiles/databaseRunner.dir/all: SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/all
 CMakeFiles/databaseRunner.dir/all: SQLiteCpp/CMakeFiles/SQLiteCpp.dir/all
+CMakeFiles/databaseRunner.dir/all: SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/all
+CMakeFiles/databaseRunner.dir/all: lib/CMakeFiles/performanceEval.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=9,10 "Built target databaseRunner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=9,10,11 "Built target databaseRunner"
 .PHONY : CMakeFiles/databaseRunner.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/databaseRunner.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/databaseRunner.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 0
 .PHONY : CMakeFiles/databaseRunner.dir/rule
@@ -141,7 +160,7 @@ CMakeFiles/databaseRunner.dir/clean:
 # Target rules for target SQLiteCpp/CMakeFiles/SQLiteCpp.dir
 
 # All Build rule for target.
-SQLiteCpp/CMakeFiles/SQLiteCpp.dir/all: SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/all
+SQLiteCpp/CMakeFiles/SQLiteCpp.dir/all:
 	$(MAKE) $(MAKESILENT) -f SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make SQLiteCpp/CMakeFiles/SQLiteCpp.dir/depend
 	$(MAKE) $(MAKESILENT) -f SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target SQLiteCpp"
@@ -149,7 +168,7 @@ SQLiteCpp/CMakeFiles/SQLiteCpp.dir/all: SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir
 
 # Build rule for subdir invocation for target.
 SQLiteCpp/CMakeFiles/SQLiteCpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 8
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SQLiteCpp/CMakeFiles/SQLiteCpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 0
 .PHONY : SQLiteCpp/CMakeFiles/SQLiteCpp.dir/rule
@@ -196,7 +215,7 @@ SQLiteCpp/CMakeFiles/SQLiteCpp_cppcheck.dir/clean:
 SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/all:
 	$(MAKE) $(MAKESILENT) -f SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/build.make SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/depend
 	$(MAKE) $(MAKESILENT) -f SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/build.make SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=11,12 "Built target sqlite3"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=14,15 "Built target sqlite3"
 .PHONY : SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/all
 
 # Build rule for subdir invocation for target.
@@ -214,6 +233,32 @@ sqlite3: SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/rule
 SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/clean:
 	$(MAKE) $(MAKESILENT) -f SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/build.make SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/clean
 .PHONY : SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/clean
+
+#=============================================================================
+# Target rules for target lib/CMakeFiles/performanceEval.dir
+
+# All Build rule for target.
+lib/CMakeFiles/performanceEval.dir/all: SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/all
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/performanceEval.dir/build.make lib/CMakeFiles/performanceEval.dir/depend
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/performanceEval.dir/build.make lib/CMakeFiles/performanceEval.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=12,13 "Built target performanceEval"
+.PHONY : lib/CMakeFiles/performanceEval.dir/all
+
+# Build rule for subdir invocation for target.
+lib/CMakeFiles/performanceEval.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/performanceEval.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 0
+.PHONY : lib/CMakeFiles/performanceEval.dir/rule
+
+# Convenience name for target.
+performanceEval: lib/CMakeFiles/performanceEval.dir/rule
+.PHONY : performanceEval
+
+# clean rule for target.
+lib/CMakeFiles/performanceEval.dir/clean:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/performanceEval.dir/build.make lib/CMakeFiles/performanceEval.dir/clean
+.PHONY : lib/CMakeFiles/performanceEval.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -9,6 +9,7 @@
 
 #ifdef sqlite3_api
 #include <sqlite3.h>
+#include <databasehandler.hpp>
 #endif
 
 #ifdef SQLiteCPP
@@ -22,6 +23,9 @@ struct movie
     int length;
 };
 
+#ifdef sqlite3_api
+
+#endif
 
 int main() {
 
@@ -59,35 +63,56 @@ int main() {
 #ifdef sqlite3_api // using sqlite3 direct api
     
     sqlite3 *db;
+    
     if (SQLITE_OK==sqlite3_open("/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/moviedatabase",&db))
     {
-        std::cout << "database opened successfully!" << std::endl;
+        std::cout << "\033[32mdatabase opened successfully!\033[0m\n" << std::endl;
     }
-    std::string queryText = "SELECT * FROM movies";
-    int rowNO{2};
-    int coloumnNo{3};
-    char ***result;
-    sqlite3_stmt *stmt;
-    sqlite3_prepare_v2(db, queryText.c_str(), queryText.size(), &stmt, NULL);
+
+
     
-    auto count = sqlite3_column_count(stmt);
-    try
+    std::vector<std::string> tables{"movies", "persons"};
+    try 
     {
-        while(SQLITE_DONE != sqlite3_step(stmt))
+        static sqlite3_stmt *stmt;
+        for (const auto &tablename : tables)
         {
-            std::cout << "the first coloumn [name] is: " << sqlite3_column_text(stmt, 0) << std::endl;
-            std::cout << "the second coloumn [year] is: " << sqlite3_column_text(stmt, 1) << std::endl;
-            std::cout << "the third coloumn [length] is: " << sqlite3_column_text(stmt, 2) << std::endl;
+            std::cout << "----------" + tablename << std::endl;
+            std::string queryText;
+            if (tablename == "movies")
+            {   
+                queryText = "SELECT title FROM " + tablename +";";
+            }else
+            {
+                queryText = "SELECT * FROM " + tablename +";";
+            }
+
+            auto rc1 = sqlite3_prepare_v2(db, queryText.c_str(), -1, &stmt, nullptr);
+            if (rc1 != SQLITE_OK)
+            {
+                std::cout << "Failed to prepare the statement : " << sqlite3_errmsg(db) << std::endl ;
+                sqlite3_close(db);
+                return rc1;
+            }
+            while(SQLITE_DONE != sqlite3_step(stmt))
+            {
+                std::cout << "the first coloumn [\033[31mname\033[0m] is: " << sqlite3_column_text(stmt, 0) << std::endl;
+                // std::cout << "the second coloumn [\033[32myear\033[0m] is: " << sqlite3_column_text(stmt, 1) << std::endl;
+                // std::cout << "the third coloumn [\033[32mlength\033[0m] is: " << sqlite3_column_text(stmt, 2) << std::endl;
+            }
+            // sqlite3_reset(stmt);
         }
+        
+    sqlite3_finalize(stmt);
+    sqlite3_close(db);
     }
     catch(const std::exception& e)
     {
         std::cerr << e.what() << '\n';
         std::cout << "exception happend!\n";
     }
-    
 
-    sqlite3_close(db);
+
 #endif
 
     for (const auto item : movies)

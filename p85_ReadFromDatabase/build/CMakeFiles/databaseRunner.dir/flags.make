@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DSQLITE_ENABLE_COLUMN_METADATA
 
-CXX_INCLUDES = -I/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/SQLiteCpp/include -I/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/SQLiteCpp/sqlite3
+CXX_INCLUDES = -I/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/include -I/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/SQLiteCpp/sqlite3 -I/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/SQLiteCpp/include
 
-CXX_FLAGS = -pthread
+CXX_FLAGS = 
 

@@ -213,6 +213,43 @@ sqlite3/fast:
 	$(MAKE) $(MAKESILENT) -f SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/build.make SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/build
 .PHONY : sqlite3/fast
 
+#=============================================================================
+# Target rules for targets named performanceEval
+
+# Build rule for target.
+performanceEval: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 performanceEval
+.PHONY : performanceEval
+
+# fast build rule for target.
+performanceEval/fast:
+	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/performanceEval.dir/build.make lib/CMakeFiles/performanceEval.dir/build
+.PHONY : performanceEval/fast
+
+lib/databasehandler.o: lib/databasehandler.cpp.o
+.PHONY : lib/databasehandler.o
+
+# target to build an object file
+lib/databasehandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.o
+.PHONY : lib/databasehandler.cpp.o
+
+lib/databasehandler.i: lib/databasehandler.cpp.i
+.PHONY : lib/databasehandler.i
+
+# target to preprocess a source file
+lib/databasehandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.i
+.PHONY : lib/databasehandler.cpp.i
+
+lib/databasehandler.s: lib/databasehandler.cpp.s
+.PHONY : lib/databasehandler.s
+
+# target to generate assembly for a file
+lib/databasehandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.s
+.PHONY : lib/databasehandler.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -252,7 +289,11 @@ help:
 	@echo "... SQLiteCpp_cppcheck"
 	@echo "... SQLiteCpp"
 	@echo "... databaseRunner"
+	@echo "... performanceEval"
 	@echo "... sqlite3"
+	@echo "... lib/databasehandler.o"
+	@echo "... lib/databasehandler.i"
+	@echo "... lib/databasehandler.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

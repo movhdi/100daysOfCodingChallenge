@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.o"
+  "CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.o.d"
   "CMakeFiles/databaseRunner.dir/main.cpp.o"
   "CMakeFiles/databaseRunner.dir/main.cpp.o.d"
   "databaseRunner"

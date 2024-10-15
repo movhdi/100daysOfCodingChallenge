@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/databaseRunner.dir/main.cpp.o -o databaseRunner  SQLiteCpp/libSQLiteCpp.a SQLiteCpp/sqlite3/libsqlite3.a -lpthread -ldl -pthread 
+/usr/bin/c++ CMakeFiles/databaseRunner.dir/main.cpp.o CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.o -o databaseRunner  lib/libperformanceEval.a SQLiteCpp/sqlite3/libsqlite3.a SQLiteCpp/libSQLiteCpp.a -lpthread -ldl /usr/lib/x86_64-linux-gnu/libsqlite3.so -lpthread 
