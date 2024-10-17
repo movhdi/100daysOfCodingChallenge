@@ -109,9 +109,14 @@ databaseRunner: CMakeFiles/databaseRunner.dir/main.cpp.o
 databaseRunner: CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.o
 databaseRunner: CMakeFiles/databaseRunner.dir/build.make
 databaseRunner: lib/libperformanceEval.a
-databaseRunner: SQLiteCpp/sqlite3/libsqlite3.a
-databaseRunner: SQLiteCpp/libSQLiteCpp.a
-databaseRunner: /usr/lib/x86_64-linux-gnu/libsqlite3.so
+databaseRunner: /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.71.0
+databaseRunner: /usr/lib/x86_64-linux-gnu/libboost_log.so.1.71.0
+databaseRunner: /usr/lib/x86_64-linux-gnu/libboost_chrono.so.1.71.0
+databaseRunner: /usr/lib/x86_64-linux-gnu/libboost_date_time.so.1.71.0
+databaseRunner: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so.1.71.0
+databaseRunner: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
+databaseRunner: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+databaseRunner: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
 databaseRunner: CMakeFiles/databaseRunner.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable databaseRunner"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/databaseRunner.dir/link.txt --verbose=$(VERBOSE)

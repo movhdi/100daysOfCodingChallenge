@@ -85,51 +85,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"headers\" \"libraries\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build//CMakeFiles/progress.marks
@@ -173,45 +128,6 @@ databaseRunner: cmake_check_build_system
 databaseRunner/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/build
 .PHONY : databaseRunner/fast
-
-#=============================================================================
-# Target rules for targets named SQLiteCpp
-
-# Build rule for target.
-SQLiteCpp: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SQLiteCpp
-.PHONY : SQLiteCpp
-
-# fast build rule for target.
-SQLiteCpp/fast:
-	$(MAKE) $(MAKESILENT) -f SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build.make SQLiteCpp/CMakeFiles/SQLiteCpp.dir/build
-.PHONY : SQLiteCpp/fast
-
-#=============================================================================
-# Target rules for targets named SQLiteCpp_cppcheck
-
-# Build rule for target.
-SQLiteCpp_cppcheck: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SQLiteCpp_cppcheck
-.PHONY : SQLiteCpp_cppcheck
-
-# fast build rule for target.
-SQLiteCpp_cppcheck/fast:
-	$(MAKE) $(MAKESILENT) -f SQLiteCpp/CMakeFiles/SQLiteCpp_cppcheck.dir/build.make SQLiteCpp/CMakeFiles/SQLiteCpp_cppcheck.dir/build
-.PHONY : SQLiteCpp_cppcheck/fast
-
-#=============================================================================
-# Target rules for targets named sqlite3
-
-# Build rule for target.
-sqlite3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sqlite3
-.PHONY : sqlite3
-
-# fast build rule for target.
-sqlite3/fast:
-	$(MAKE) $(MAKESILENT) -f SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/build.make SQLiteCpp/sqlite3/CMakeFiles/sqlite3.dir/build
-.PHONY : sqlite3/fast
 
 #=============================================================================
 # Target rules for targets named performanceEval
@@ -281,16 +197,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... SQLiteCpp_cppcheck"
-	@echo "... SQLiteCpp"
 	@echo "... databaseRunner"
 	@echo "... performanceEval"
-	@echo "... sqlite3"
 	@echo "... lib/databasehandler.o"
 	@echo "... lib/databasehandler.i"
 	@echo "... lib/databasehandler.s"
