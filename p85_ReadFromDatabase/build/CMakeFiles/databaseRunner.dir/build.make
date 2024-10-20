@@ -97,16 +97,48 @@ CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/lib/databasehandler.cpp -o CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.s
 
+CMakeFiles/databaseRunner.dir/lib/logging.cpp.o: CMakeFiles/databaseRunner.dir/flags.make
+CMakeFiles/databaseRunner.dir/lib/logging.cpp.o: /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/lib/logging.cpp
+CMakeFiles/databaseRunner.dir/lib/logging.cpp.o: CMakeFiles/databaseRunner.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/databaseRunner.dir/lib/logging.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/databaseRunner.dir/lib/logging.cpp.o -MF CMakeFiles/databaseRunner.dir/lib/logging.cpp.o.d -o CMakeFiles/databaseRunner.dir/lib/logging.cpp.o -c /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/lib/logging.cpp
+
+CMakeFiles/databaseRunner.dir/lib/logging.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/databaseRunner.dir/lib/logging.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/lib/logging.cpp > CMakeFiles/databaseRunner.dir/lib/logging.cpp.i
+
+CMakeFiles/databaseRunner.dir/lib/logging.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/databaseRunner.dir/lib/logging.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/lib/logging.cpp -o CMakeFiles/databaseRunner.dir/lib/logging.cpp.s
+
+CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.o: CMakeFiles/databaseRunner.dir/flags.make
+CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.o: /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/lib/SystemInit.cpp
+CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.o: CMakeFiles/databaseRunner.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.o -MF CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.o.d -o CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.o -c /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/lib/SystemInit.cpp
+
+CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/lib/SystemInit.cpp > CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.i
+
+CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/lib/SystemInit.cpp -o CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.s
+
 # Object files for target databaseRunner
 databaseRunner_OBJECTS = \
 "CMakeFiles/databaseRunner.dir/main.cpp.o" \
-"CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.o"
+"CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.o" \
+"CMakeFiles/databaseRunner.dir/lib/logging.cpp.o" \
+"CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.o"
 
 # External object files for target databaseRunner
 databaseRunner_EXTERNAL_OBJECTS =
 
 databaseRunner: CMakeFiles/databaseRunner.dir/main.cpp.o
 databaseRunner: CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.o
+databaseRunner: CMakeFiles/databaseRunner.dir/lib/logging.cpp.o
+databaseRunner: CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.o
 databaseRunner: CMakeFiles/databaseRunner.dir/build.make
 databaseRunner: lib/libperformanceEval.a
 databaseRunner: /usr/lib/x86_64-linux-gnu/libboost_log_setup.so.1.71.0
@@ -118,7 +150,7 @@ databaseRunner: /usr/lib/x86_64-linux-gnu/libboost_regex.so.1.71.0
 databaseRunner: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
 databaseRunner: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
 databaseRunner: CMakeFiles/databaseRunner.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable databaseRunner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable databaseRunner"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/databaseRunner.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

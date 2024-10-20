@@ -142,6 +142,30 @@ performanceEval/fast:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/performanceEval.dir/build.make lib/CMakeFiles/performanceEval.dir/build
 .PHONY : performanceEval/fast
 
+lib/SystemInit.o: lib/SystemInit.cpp.o
+.PHONY : lib/SystemInit.o
+
+# target to build an object file
+lib/SystemInit.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.o
+.PHONY : lib/SystemInit.cpp.o
+
+lib/SystemInit.i: lib/SystemInit.cpp.i
+.PHONY : lib/SystemInit.i
+
+# target to preprocess a source file
+lib/SystemInit.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.i
+.PHONY : lib/SystemInit.cpp.i
+
+lib/SystemInit.s: lib/SystemInit.cpp.s
+.PHONY : lib/SystemInit.s
+
+# target to generate assembly for a file
+lib/SystemInit.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/lib/SystemInit.cpp.s
+.PHONY : lib/SystemInit.cpp.s
+
 lib/databasehandler.o: lib/databasehandler.cpp.o
 .PHONY : lib/databasehandler.o
 
@@ -165,6 +189,30 @@ lib/databasehandler.s: lib/databasehandler.cpp.s
 lib/databasehandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/lib/databasehandler.cpp.s
 .PHONY : lib/databasehandler.cpp.s
+
+lib/logging.o: lib/logging.cpp.o
+.PHONY : lib/logging.o
+
+# target to build an object file
+lib/logging.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/lib/logging.cpp.o
+.PHONY : lib/logging.cpp.o
+
+lib/logging.i: lib/logging.cpp.i
+.PHONY : lib/logging.i
+
+# target to preprocess a source file
+lib/logging.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/lib/logging.cpp.i
+.PHONY : lib/logging.cpp.i
+
+lib/logging.s: lib/logging.cpp.s
+.PHONY : lib/logging.s
+
+# target to generate assembly for a file
+lib/logging.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/lib/logging.cpp.s
+.PHONY : lib/logging.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -200,9 +248,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... databaseRunner"
 	@echo "... performanceEval"
+	@echo "... lib/SystemInit.o"
+	@echo "... lib/SystemInit.i"
+	@echo "... lib/SystemInit.s"
 	@echo "... lib/databasehandler.o"
 	@echo "... lib/databasehandler.i"
 	@echo "... lib/databasehandler.s"
+	@echo "... lib/logging.o"
+	@echo "... lib/logging.i"
+	@echo "... lib/logging.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

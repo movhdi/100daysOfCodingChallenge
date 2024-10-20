@@ -18,6 +18,7 @@ message("CMAKE_CURRENT_SOURCE_DIR :  " ${CMAKE_CURRENT_SOURCE_DIR})
 if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})    
     add_executable(databaseRunner main.cpp)
+    target_include_directories(databaseRunner PUBLIC ".")
     target_link_libraries(databaseRunner  
                                          performanceEval
                                          Boost::log_setup
