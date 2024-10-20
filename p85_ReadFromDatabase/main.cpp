@@ -24,67 +24,10 @@ struct movie {
   int length;
 };
 
-#ifdef sqlite3_api
-
-#endif
-
-// enum severity_level {
-//     verbose,
-//     debug,
-//     info,
-//     warning,
-//     error,
-//     critical,
-// } ;
-
-// namespace logging = boost::log;
-// namespace sinks = boost::log::sinks;
-// namespace src = boost::log::sources;
-// namespace expr = boost::log::expressions;
-// namespace attrs = boost::log::attributes;
-// namespace keywords = boost::log::keywords;
-
-// boost::log::add_common_attributes();
-// boost::log::sources::severity_logger<boost::log::trivial::severity_level> logger;
-// // Setting up console output
-// boost::log::add_console_log(std::cout, boost::log::keywords::format = "[%TimeStamp%] [%Severity%]: %Message%");
-                                                 
-// #define PerformanceLOG_verbose                                                                                                     \
-//     BOOST_LOG_SEV(::global_logger::get(), info)
-
 
 int main() {
 
   std::vector<movie> movies;
-
-#ifdef SQLiteCPP // using SQLiteCpp wrapper api
-  std::cout << "\n\nbuilt and runned successfully" << std::endl;
-  std::cout << "SQlite3 version " << SQLite::VERSION << " ("
-            << SQLite::getLibVersion() << ")" << std::endl;
-  std::cout << "SQliteC++ version " << SQLITECPP_VERSION << std::endl;
-
-  try {
-    SQLite::Database db("../moviedatabase", SQLite::OPEN_READWRITE);
-    std::cout << "SQLite database file '" << db.getFilename().c_str()
-              << "' opened successfully" << std::endl;
-    std::string queryText = "SELECT * FROM";
-    SQLite::Statement query(db, "SELECT * FROM movies");
-
-    while (query.executeStep()) {
-      std::cout << "row : " << query.getColumn(0) << "\\" << query.getColumn(1)
-                << "\\" << query.getColumn(2) << std::endl;
-      movie temp;
-      std::stringstream ss;
-      ss << query.getColumn(0);
-      temp.name = ss.str();
-      temp.year = query.getColumn(1);
-      temp.length = query.getColumn(2);
-      movies.emplace_back(std::move(temp));
-    }
-  } catch (const std::exception &e) {
-    std::cerr << e.what() << '\n';
-  }
-#endif
 
 #ifdef sqlite3_api // using sqlite3 direct api
 
