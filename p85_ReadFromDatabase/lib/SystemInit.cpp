@@ -18,6 +18,7 @@ SystemInit &SystemInit::getInstance()
 bool SystemInit::initializeSystem()
 {
     // TODO: initialize logging system here
+    logging_sys::init("../logconf.ini");
     std::cout << "system initialized from out stream!\n";
     LOG_info << "system initialized from LogInfo\n";
     systeminitialized = true;

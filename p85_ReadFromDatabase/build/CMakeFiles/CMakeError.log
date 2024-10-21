@@ -1,22 +1,22 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-stlcbq
+Change Dir: /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-A8LSIW
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_75d08/fast && /usr/bin/make  -f CMakeFiles/cmTC_75d08.dir/build.make CMakeFiles/cmTC_75d08.dir/build
-make[1]: Entering directory '/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-stlcbq'
-Building CXX object CMakeFiles/cmTC_75d08.dir/src.cxx.o
-/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_75d08.dir/src.cxx.o -c /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-stlcbq/src.cxx
-Linking CXX executable cmTC_75d08
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75d08.dir/link.txt --verbose=1
-/usr/bin/c++ CMakeFiles/cmTC_75d08.dir/src.cxx.o -o cmTC_75d08 
-/usr/bin/ld: CMakeFiles/cmTC_75d08.dir/src.cxx.o: in function `main':
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6e651/fast && /usr/bin/make  -f CMakeFiles/cmTC_6e651.dir/build.make CMakeFiles/cmTC_6e651.dir/build
+make[1]: Entering directory '/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-A8LSIW'
+Building CXX object CMakeFiles/cmTC_6e651.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_6e651.dir/src.cxx.o -c /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-A8LSIW/src.cxx
+Linking CXX executable cmTC_6e651
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e651.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_6e651.dir/src.cxx.o -o cmTC_6e651 
+/usr/bin/ld: CMakeFiles/cmTC_6e651.dir/src.cxx.o: in function `main':
 src.cxx:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.cxx:(.text+0x5e): undefined reference to `pthread_cancel'
 /usr/bin/ld: src.cxx:(.text+0x6f): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_75d08.dir/build.make:99: cmTC_75d08] Error 1
-make[1]: Leaving directory '/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-stlcbq'
-make: *** [Makefile:127: cmTC_75d08/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_6e651.dir/build.make:99: cmTC_6e651] Error 1
+make[1]: Leaving directory '/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-A8LSIW'
+make: *** [Makefile:127: cmTC_6e651/fast] Error 2
 
 
 Source file was:
@@ -42,20 +42,20 @@ int main(void)
 
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-UgjAQs
+Change Dir: /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-pOD0qV
 
-Run Build Command(s):/usr/bin/make -f Makefile cmTC_74027/fast && /usr/bin/make  -f CMakeFiles/cmTC_74027.dir/build.make CMakeFiles/cmTC_74027.dir/build
-make[1]: Entering directory '/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-UgjAQs'
-Building CXX object CMakeFiles/cmTC_74027.dir/CheckFunctionExists.cxx.o
-/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_74027.dir/CheckFunctionExists.cxx.o -c /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-UgjAQs/CheckFunctionExists.cxx
-Linking CXX executable cmTC_74027
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74027.dir/link.txt --verbose=1
-/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_74027.dir/CheckFunctionExists.cxx.o -o cmTC_74027  -lpthreads 
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_c200a/fast && /usr/bin/make  -f CMakeFiles/cmTC_c200a.dir/build.make CMakeFiles/cmTC_c200a.dir/build
+make[1]: Entering directory '/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-pOD0qV'
+Building CXX object CMakeFiles/cmTC_c200a.dir/CheckFunctionExists.cxx.o
+/usr/bin/c++   -DCHECK_FUNCTION_EXISTS=pthread_create -o CMakeFiles/cmTC_c200a.dir/CheckFunctionExists.cxx.o -c /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-pOD0qV/CheckFunctionExists.cxx
+Linking CXX executable cmTC_c200a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c200a.dir/link.txt --verbose=1
+/usr/bin/c++  -DCHECK_FUNCTION_EXISTS=pthread_create CMakeFiles/cmTC_c200a.dir/CheckFunctionExists.cxx.o -o cmTC_c200a  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_74027.dir/build.make:99: cmTC_74027] Error 1
-make[1]: Leaving directory '/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-UgjAQs'
-make: *** [Makefile:127: cmTC_74027/fast] Error 2
+make[1]: *** [CMakeFiles/cmTC_c200a.dir/build.make:99: cmTC_c200a] Error 1
+make[1]: Leaving directory '/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles/CMakeScratch/TryCompile-pOD0qV'
+make: *** [Makefile:127: cmTC_c200a/fast] Error 2
 
 
 

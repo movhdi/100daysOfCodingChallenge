@@ -28,6 +28,9 @@ namespace fs = boost::filesystem;
 namespace logging = boost::log::BOOST_LOG_VERSION_NAMESPACE;
 namespace attrs = logging::attributes;
 
+namespace logging_sys
+{
+
 std::array<std::string, 6> severity_strings = {
     "VERB", //
     "DEBG", //
@@ -151,3 +154,4 @@ void update_process_name(std::string process_name) {
         current_process_name.set(padded_process_name);
     }
 }
+} // logging_sys

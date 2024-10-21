@@ -15,6 +15,9 @@
 #include <exception>
 #include <string>
 
+namespace logging_sys
+{
+
 enum severity_level {
     verbose,
     debug,
@@ -28,32 +31,33 @@ void init(const std::string& logconf);
 void init(const std::string& logconf, std::string process_name);
 void update_process_name(std::string process_name);
 std::string trace();
+} // logging
 
 
 // clang-format off
 #define LOG_verbose                                                                                                  \
-    BOOST_LOG_SEV(::global_logger::get(), ::Everest::Logging::verbose)                                                 \
+    BOOST_LOG_SEV(::global_logger::get(), logging_sys::verbose)                                                 \
         << boost::log::BOOST_LOG_VERSION_NAMESPACE::add_value("file", __FILE__)                                        \
         << boost::log::BOOST_LOG_VERSION_NAMESPACE::add_value("line", __LINE__)                                        \
         << boost::log::BOOST_LOG_VERSION_NAMESPACE::add_value("function", BOOST_CURRENT_FUNCTION)
 
 #define LOG_debug                                                                                                    \
-    BOOST_LOG_SEV(::global_logger::get(), debug)                                                   \
+    BOOST_LOG_SEV(::global_logger::get(), logging_sys::debug)                                                   \
         << boost::log::BOOST_LOG_VERSION_NAMESPACE::add_value("function", BOOST_CURRENT_FUNCTION)
 
 #define LOG_info                                                                                                     \
-    BOOST_LOG_SEV(::global_logger::get(), info)
+    BOOST_LOG_SEV(::global_logger::get(), logging_sys::info)
 
 #define LOG_warning                                                                                                  \
-    BOOST_LOG_SEV(::global_logger::get(), warning)                                                 \
+    BOOST_LOG_SEV(::global_logger::get(), logging_sys::warning)                                                 \
         << boost::log::BOOST_LOG_VERSION_NAMESPACE::add_value("function", BOOST_CURRENT_FUNCTION)
 
 #define LOG_error                                                                                                    \
-    BOOST_LOG_SEV(::global_logger::get(), error)                                                   \
+    BOOST_LOG_SEV(::global_logger::get(), logging_sys::error)                                                   \
         << boost::log::BOOST_LOG_VERSION_NAMESPACE::add_value("function", BOOST_CURRENT_FUNCTION)
 
 #define LOG_critical                                                                                                 \
-    BOOST_LOG_SEV(::global_logger::get(), critical)                                                \
+    BOOST_LOG_SEV(::global_logger::get(), logging_sys::critical)                                                \
         << boost::log::BOOST_LOG_VERSION_NAMESPACE::add_value("function", BOOST_CURRENT_FUNCTION)
 // clang-format on
 
@@ -76,6 +80,6 @@ std::string trace();
 
 BOOST_LOG_INLINE_GLOBAL_LOGGER_DEFAULT(
     global_logger,
-    boost::log::BOOST_LOG_VERSION_NAMESPACE::sources::severity_logger_mt<severity_level>)
+    boost::log::BOOST_LOG_VERSION_NAMESPACE::sources::severity_logger_mt<logging_sys::severity_level>)
 
 #endif // LOGGING_HPP

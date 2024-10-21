@@ -78,12 +78,13 @@ int main() {
 
 #endif
   SystemInit::getInstance().initializeSystem();
-  update_process_name("PerformanceEValuationModule");
   LOG_error << "Fabricated Error";
+
   for (const auto item : movies) {
     std::cout << "\nname of movie: " << item.name << "\nyear :" << item.year
               << "\nlength: " << item.length << std::endl;
   }
+  
   DatabaseHandler dbM("Mahdi");
   dbM.database_open();
   
