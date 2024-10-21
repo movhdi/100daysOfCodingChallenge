@@ -1,0 +1,2 @@
+/usr/bin/ar qc libperformanceEval.a CMakeFiles/performanceEval.dir/databasehandler.cpp.o CMakeFiles/performanceEval.dir/logging.cpp.o CMakeFiles/performanceEval.dir/SystemInit.cpp.o
+/usr/bin/ranlib libperformanceEval.a
