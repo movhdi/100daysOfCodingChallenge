@@ -7,7 +7,8 @@
 #include <vector>
 #include <filesystem>
 #include <iostream>
-
+#include <dbStatement.hpp>
+#include <memory>
 
 class DatabaseHandler
 {
@@ -15,17 +16,25 @@ private:
     std::string filename;
     std::filesystem::path pth;
     sqlite3* db;
+    std::vector<std::string> tables;
+
 public:
     DatabaseHandler(std::string fileName);
     // database init
     int database_open();
-    // open a connection to database
+
+    // transaction begin
+    bool begin_transaction();
+    // transaction commit
+    bool commit_transaction();
+    // transaction rollback
+
+    // insert score
+
+    // fetch score
 
     // create a statement
-
-    // finilize the statement
-
-    // close the database
+    std::unique_ptr<dbStatement> make_statement(std::string query);
 
     // destructor
     ~DatabaseHandler();

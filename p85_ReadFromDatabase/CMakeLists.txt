@@ -11,7 +11,7 @@ find_package(Threads REQUIRED)
 find_package(Boost REQUIRED COMPONENTS log_setup log system thread filesystem)
 
 # add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/SQLiteCpp)
-add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib)
+# add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 message("CMAKE_CURRENT_SOURCE_DIR :  " ${CMAKE_CURRENT_SOURCE_DIR})
 
 
@@ -20,7 +20,7 @@ if(Boost_FOUND)
     add_executable(databaseRunner main.cpp)
     target_include_directories(databaseRunner PUBLIC ".")
     target_link_libraries(databaseRunner  
-                                         performanceEval
+                                        #  performanceEval
                                          Boost::log_setup
                                          Boost::log
                                          sqlite3

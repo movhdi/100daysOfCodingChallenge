@@ -5,12 +5,9 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include <logging.hpp>
-#include <SystemInit.hpp>
 
 
 #ifdef sqlite3_api
-#include <databasehandler.hpp>
 #include <sqlite3.h>
 #endif
 
@@ -41,7 +38,7 @@ int main() {
 
   std::vector<std::string> tables{"movies", "persons"};
   try {
-    static sqlite3_stmt *stmt;
+    sqlite3_stmt *stmt;
     for (const auto &tablename : tables) {
       std::cout << "----------" + tablename << std::endl;
       std::string queryText;
@@ -66,7 +63,6 @@ int main() {
         // coloumn [\033[32mlength\033[0m] is: " << sqlite3_column_text(stmt, 2)
         // << std::endl;
       }
-      // sqlite3_reset(stmt);
     }
 
     sqlite3_finalize(stmt);
@@ -76,18 +72,35 @@ int main() {
     std::cout << "exception happend!\n";
   }
 
-#endif
-  SystemInit::getInstance().initializeSystem();
-  LOG_error << "Fabricated Error";
+try
+{
+  sqlite3_stmt * stmt = nullptr;
+  std::string sql;
+  sql = "SELECT * FROM movies WHERE title = @moviename;";
+  sqlite3_prepare_v2(db, sql.c_str(),sql.size(), &stmt, nullptr);
+  std::cout << "Error prepare:" << sqlite3_errmsg(db) <<"\n";
+  std::string paramName = "@moviename";
+  std::string valueName = "Forrest Gump";
+  
+  int index = sqlite3_bind_parameter_index(stmt, paramName.c_str());
+  std::cout << "Error param index:" << sqlite3_errmsg(db)<< "\n";
+  std::cout << "index is : " << index << "\n";
+  
+  sqlite3_bind_text(stmt, index, valueName.c_str(),valueName.length(), SQLITE_TRANSIENT);
+  std::cout << "Error bind:" << sqlite3_errmsg(db)<< "\n";
+  
+  sqlite3_step(stmt);
+  std::cout << "Error step:" << sqlite3_errmsg(db)<< "\n";
+  
+  std::cout << sqlite3_column_int(stmt,1) << "\n";
+  std::cout << "Error column:" << sqlite3_errmsg(db)<< "\n";
+}
+catch(const std::exception& e)
+{
+  std::cerr << e.what() << '\n';
+}
 
-  for (const auto item : movies) {
-    std::cout << "\nname of movie: " << item.name << "\nyear :" << item.year
-              << "\nlength: " << item.length << std::endl;
-  }
-  
-  DatabaseHandler dbM("Mahdi");
-  dbM.database_open();
-  
+#endif  
     
 
   return 0;

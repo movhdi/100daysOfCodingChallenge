@@ -64,46 +64,29 @@ CMAKE_BINARY_DIR = /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build
 
 # The main recursive "all" target.
 all: CMakeFiles/databaseRunner.dir/all
-all: lib/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: lib/preinstall
+preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/databaseRunner.dir/clean
-clean: lib/clean
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory lib
-
-# Recursive "all" directory target.
-lib/all: lib/CMakeFiles/performanceEval.dir/all
-.PHONY : lib/all
-
-# Recursive "preinstall" directory target.
-lib/preinstall:
-.PHONY : lib/preinstall
-
-# Recursive "clean" directory target.
-lib/clean: lib/CMakeFiles/performanceEval.dir/clean
-.PHONY : lib/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/databaseRunner.dir
 
 # All Build rule for target.
-CMakeFiles/databaseRunner.dir/all: lib/CMakeFiles/performanceEval.dir/all
+CMakeFiles/databaseRunner.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target databaseRunner"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=1,2 "Built target databaseRunner"
 .PHONY : CMakeFiles/databaseRunner.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/databaseRunner.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/databaseRunner.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 0
 .PHONY : CMakeFiles/databaseRunner.dir/rule
@@ -116,32 +99,6 @@ databaseRunner: CMakeFiles/databaseRunner.dir/rule
 CMakeFiles/databaseRunner.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/databaseRunner.dir/build.make CMakeFiles/databaseRunner.dir/clean
 .PHONY : CMakeFiles/databaseRunner.dir/clean
-
-#=============================================================================
-# Target rules for target lib/CMakeFiles/performanceEval.dir
-
-# All Build rule for target.
-lib/CMakeFiles/performanceEval.dir/all:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/performanceEval.dir/build.make lib/CMakeFiles/performanceEval.dir/depend
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/performanceEval.dir/build.make lib/CMakeFiles/performanceEval.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles --progress-num=6,7,8,9 "Built target performanceEval"
-.PHONY : lib/CMakeFiles/performanceEval.dir/all
-
-# Build rule for subdir invocation for target.
-lib/CMakeFiles/performanceEval.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/performanceEval.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/build/CMakeFiles 0
-.PHONY : lib/CMakeFiles/performanceEval.dir/rule
-
-# Convenience name for target.
-performanceEval: lib/CMakeFiles/performanceEval.dir/rule
-.PHONY : performanceEval
-
-# clean rule for target.
-lib/CMakeFiles/performanceEval.dir/clean:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/performanceEval.dir/build.make lib/CMakeFiles/performanceEval.dir/clean
-.PHONY : lib/CMakeFiles/performanceEval.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

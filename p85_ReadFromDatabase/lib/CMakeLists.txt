@@ -3,7 +3,11 @@ add_library(performanceEval)
 
 find_package(Boost REQUIRED COMPONENTS log_setup log system thread filesystem)
 
-target_sources(performanceEval PUBLIC databasehandler.cpp logging.cpp SystemInit.cpp)
+target_sources(performanceEval PUBLIC 
+                    databasehandler.cpp
+                    logging.cpp
+                    SystemInit.cpp 
+                    dbStatement.cpp)
 
 target_include_directories(performanceEval
             PUBLIC 

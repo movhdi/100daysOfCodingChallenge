@@ -4,12 +4,10 @@
 
 SystemInit::SystemInit()
 {
-    std::cout << "SystemInit constructor called";
 }
 
 SystemInit &SystemInit::getInstance()
 {
-    // TODO: insert return statement here
     static SystemInit instance;
     return instance;
 }
@@ -17,10 +15,9 @@ SystemInit &SystemInit::getInstance()
 
 bool SystemInit::initializeSystem()
 {
-    // TODO: initialize logging system here
+    // initialize logging system here
     logging_sys::init("../logconf.ini");
-    std::cout << "system initialized from out stream!\n";
-    LOG_info << "system initialized from LogInfo\n";
+    LOG_info << "system initialized";
     systeminitialized = true;
     return systeminitialized;
 }

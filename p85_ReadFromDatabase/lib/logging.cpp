@@ -1,5 +1,4 @@
 
-#include <boost/filesystem.hpp>
 #include <boost/log/attributes/current_process_id.hpp>
 #include <boost/log/attributes/current_process_name.hpp>
 #include <boost/log/attributes/current_thread_id.hpp>
@@ -13,7 +12,7 @@
 #include <boost/log/utility/setup/settings.hpp>
 #include <boost/log/utility/setup/settings_parser.hpp>
 #include <fstream>
-
+#include <filesystem>
 #include <logging.hpp>
 
 // this will only be used while bootstrapping our logging (e.g. the logging settings aren't yet applied)
@@ -24,7 +23,7 @@
 //         throw(exception);                                                                                              \
 //     } while (0);
 
-namespace fs = boost::filesystem;
+namespace fs = std::filesystem;
 namespace logging = boost::log::BOOST_LOG_VERSION_NAMESPACE;
 namespace attrs = logging::attributes;
 

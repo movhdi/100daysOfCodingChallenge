@@ -10,7 +10,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/CMakeLists.txt"
   "CMakeFiles/3.25.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeSystem.cmake"
-  "/home/med/100daysOfCodingChallenge/p85_ReadFromDatabase/lib/CMakeLists.txt"
   "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.71.0/BoostConfigVersion.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.71.0.cmake"
@@ -147,11 +146,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/3.25.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.25.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "lib/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/databaseRunner.dir/DependInfo.cmake"
-  "lib/CMakeFiles/performanceEval.dir/DependInfo.cmake"
   )
